@@ -117,7 +117,7 @@ export function AureaLogo({
             fontWeight="700"
             fontSize="120"
           >
-            MMM <tspan fontSize="54">S.r.l.</tspan>
+            3 M <tspan fontSize="54">S.r.l.</tspan>
           </text>
 
           <text

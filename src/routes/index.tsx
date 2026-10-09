@@ -56,7 +56,7 @@ function Home() {
             </span>
           </div>
 
-          <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-medium leading-[1.02] mb-10 text-balance max-w-[22ch] text-navy letter-breathe">
+          <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-medium leading-[1.02] mb-10 text-balance max-w-[22ch] text-navy title-reveal">
             {t("hero.title")}
           </h1>
 
