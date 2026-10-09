@@ -23,7 +23,7 @@ const en: Dict = {
   "shop.eyebrow": "The Collection",
   "shop.title": "Three expressions, one light",
   "shop.intro":
-    "Every bottle of MMM S.r.l. begins with the same blue agave and the same slow gesture. What changes is time. Allocations are limited — write to us to reserve yours.",
+    "Every bottle of 3 M S.r.l. begins with the same blue agave and the same slow gesture. What changes is time. Allocations are limited — write to us to reserve yours.",
   "shop.available": "Available",
   "shop.comingSoon": "Coming soon",
   "shop.reserve": "Reserve",
@@ -40,7 +40,7 @@ const en: Dict = {
   "shop.back": "← Back to the collection",
   "shop.other": "The other expressions",
   "shop.noPurchase":
-    "MMM S.r.l. is not sold online. Every request is handled personally by us.",
+    "3 M S.r.l. is not sold online. Every request is handled personally by us.",
 
   "shop.form.intro":
     "Leave us your details and we'll reply personally with availability and delivery.",
@@ -80,7 +80,7 @@ const en: Dict = {
   "story.p2":
     "From those roots grew a larger passion: the world of spirits, and tequila above all. Those who know fermentation, time and the patience of the land recognise in agave the same language as olive trees and vines.",
   "story.p3":
-    "So, in recent years, they set out on a new adventure: to create a tequila as faithful as possible to Mexican tradition, yet with an eye turned to Puglia. MMM S.r.l. is made in Mexico, in the heart of the blue agave. It is in Puglia that it finds its Mediterranean home.",
+    "So, in recent years, they set out on a new adventure: to create a tequila as faithful as possible to Mexican tradition, yet with an eye turned to Puglia. 3 M S.r.l. is made in Mexico, in the heart of the blue agave. It is in Puglia that it finds its Mediterranean home.",
   "story.founders": "The founders",
   "story.bio.soon": "Biography coming soon.",
   "story.lm.role": "CO-FOUNDER",
@@ -122,17 +122,17 @@ const en: Dict = {
   "footer.connect": "Connect",
   "footer.legal.privacy": "Privacy",
   "footer.legal.terms": "Terms",
-  "footer.rights": "© 2026 MMM S.r.l.",
+  "footer.rights": "© 2026 3 M S.r.l.",
   "footer.responsible": "18+ · Drink responsibly",
 
   "age.title": "A moment, please.",
-  "age.body": "You must be of legal drinking age in your country to enter MMM S.r.l..",
+  "age.body": "You must be of legal drinking age in your country to enter 3 M S.r.l..",
   "age.question": "Are you of legal drinking age?",
   "age.yes": "Yes, enter",
   "age.no": "No",
   "age.rejected":
     "We appreciate your honesty. Please return once you have reached the legal drinking age in your country.",
-  "age.disclaimer": "MMM S.r.l. reminds you to enjoy responsibly.",
+  "age.disclaimer": "3 M S.r.l. reminds you to enjoy responsibly.",
 
   "brandPage.eyebrow": "MMM",
   "brandPage.body": "We're crafting something new. This brand will be unveiled soon.",
@@ -149,7 +149,7 @@ const it: Dict = {
   "shop.eyebrow": "La Collezione",
   "shop.title": "Tre espressioni, una sola luce",
   "shop.intro":
-    "Ogni bottiglia di MMM S.r.l. nasce dalla stessa agave blu e dallo stesso gesto lento. Ciò che cambia è il tempo. Le allocazioni sono limitate: scrivici per riservare la tua.",
+    "Ogni bottiglia di 3 M S.r.l. nasce dalla stessa agave blu e dallo stesso gesto lento. Ciò che cambia è il tempo. Le allocazioni sono limitate: scrivici per riservare la tua.",
   "shop.available": "Disponibile",
   "shop.comingSoon": "In arrivo",
   "shop.reserve": "Riserva",
@@ -166,7 +166,7 @@ const it: Dict = {
   "shop.back": "← Torna alla collezione",
   "shop.other": "Le altre espressioni",
   "shop.noPurchase":
-    "MMM S.r.l. non vende online. Ogni richiesta viene seguita personalmente da noi.",
+    "3 M S.r.l. non vende online. Ogni richiesta viene seguita personalmente da noi.",
 
   "shop.form.intro":
     "Lascia i tuoi dati: ti risponderemo personalmente con disponibilità e modalità di consegna.",
@@ -206,7 +206,7 @@ const it: Dict = {
   "story.p2":
     "Da queste radici è nata una passione più grande: il mondo dei distillati, e la tequila su tutti. Chi conosce la fermentazione, il tempo e la pazienza della terra riconosce nell'agave la stessa lingua degli ulivi e delle vigne.",
   "story.p3":
-    "Così, negli ultimi anni, hanno intrapreso una nuova avventura: creare una tequila il più possibile fedele alla tradizione messicana, ma con uno sguardo rivolto alla Puglia. MMM S.r.l. è prodotta in Messico, nel cuore dell'agave blu. È in Puglia che trova la sua casa mediterranea.",
+    "Così, negli ultimi anni, hanno intrapreso una nuova avventura: creare una tequila il più possibile fedele alla tradizione messicana, ma con uno sguardo rivolto alla Puglia. 3 M S.r.l. è prodotta in Messico, nel cuore dell'agave blu. È in Puglia che trova la sua casa mediterranea.",
   "story.founders": "I fondatori",
   "story.bio.soon": "Biografia in arrivo.",
   "story.lm.role": "CO-FOUNDER",
@@ -248,18 +248,18 @@ const it: Dict = {
   "footer.connect": "Contatti",
   "footer.legal.privacy": "Privacy",
   "footer.legal.terms": "Termini",
-  "footer.rights": "© 2026 MMM S.r.l.",
+  "footer.rights": "© 2026 3 M S.r.l.",
   "footer.responsible": "18+ · Bevi responsabilmente",
 
   "age.title": "Un momento, per favore.",
   "age.body":
-    "Devi aver raggiunto l'età legale per il consumo di alcolici nel tuo paese per entrare in MMM S.r.l..",
+    "Devi aver raggiunto l'età legale per il consumo di alcolici nel tuo paese per entrare in 3 M S.r.l..",
   "age.question": "Hai raggiunto l'età legale?",
   "age.yes": "Sì, entra",
   "age.no": "No",
   "age.rejected":
     "Ti ringraziamo per la sincerità. Torna quando avrai raggiunto l'età legale per il consumo di alcolici.",
-  "age.disclaimer": "MMM S.r.l. ti ricorda di bere responsabilmente.",
+  "age.disclaimer": "3 M S.r.l. ti ricorda di bere responsabilmente.",
 
   "brandPage.eyebrow": "MMM",
   "brandPage.body": "Stiamo creando qualcosa di nuovo. Questo marchio sarà svelato presto.",

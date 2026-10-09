@@ -4,10 +4,10 @@ import { useTranslation } from "@/lib/i18n";
 export const Route = createFileRoute("/tequila-1")({
   head: () => ({
     meta: [
-      { title: "Tequila 1 — MMM S.r.l." },
-      { name: "description", content: "A new tequila brand from MMM S.r.l., coming soon." },
+      { title: "Tequila 1 — 3 M S.r.l." },
+      { name: "description", content: "A new tequila brand from 3 M S.r.l., coming soon." },
       { name: "robots", content: "noindex" },
-      { property: "og:title", content: "Tequila 1 — MMM S.r.l." },
+      { property: "og:title", content: "Tequila 1 — 3 M S.r.l." },
       { property: "og:url", content: "/tequila-1" },
     ],
     links: [{ rel: "canonical", href: "/tequila-1" }],

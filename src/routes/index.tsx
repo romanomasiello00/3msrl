@@ -7,13 +7,13 @@ import { AureaLogo } from "@/components/AureaLogo";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "MMM S.r.l. — A House of Tequila Brands" },
+      { title: "3 M S.r.l. — A House of Tequila Brands" },
       {
         name: "description",
         content:
-          "Where the golden soul of Mexico meets the timeless light of Puglia. MMM S.r.l. is a house of tequila brands, crafted with care and rooted in place.",
+          "Where the golden soul of Mexico meets the timeless light of Puglia. 3 M S.r.l. is a house of tequila brands, crafted with care and rooted in place.",
       },
-      { property: "og:title", content: "MMM S.r.l. — A House of Tequila Brands" },
+      { property: "og:title", content: "3 M S.r.l. — A House of Tequila Brands" },
       {
         property: "og:description",
         content:
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "MMM S.r.l.",
+          name: "3 M S.r.l.",
           url: "https://aurea-pugliese-spirit.lovable.app/",
           description:
             "Where the golden soul of Mexico meets the timeless light of Puglia.",

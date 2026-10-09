@@ -15,12 +15,12 @@ interface Props {
  *   – 28 tapered needle rays radiating outward, alternating opacity
  *   – navy-outlined 3-leaf lotus centerpiece filled cream
  *
- * variant="full"    → emblem + MMM S.r.l. + ✹ PUGLIA + SOLE • TERRA • MARE • TEMPO
- * variant="compact" → emblem + ✹ PUGLIA (used in the sticky header)
+ * variant="full"    → emblem + 3 M S.r.l. + ✹ PUGLIA ✹ + SOLE • TERRA • MARE • TEMPO
+ * variant="compact" → emblem + ✹ PUGLIA ✹ (used in the sticky header)
  */
 export function AureaLogo({
   className,
-  alt = "MMM S.r.l. Puglia",
+  alt = "3 M S.r.l. Puglia",
   style,
   variant = "full",
 }: Props) {
@@ -97,7 +97,13 @@ export function AureaLogo({
           fontWeight="500"
           letterSpacing="14"
         >
-          <tspan fill="#c9a84c" fontSize="56" fontWeight="600" dy="-4">✹</tspan>  PUGLIA
+          <tspan fill="#c9a84c" fontSize="56" fontWeight="600" dy="-4">
+            ✹
+          </tspan>{" "}
+          PUGLIA{" "}
+          <tspan fill="#c9a84c" fontSize="56" fontWeight="600">
+            ✹
+          </tspan>
         </text>
       ) : (
 
@@ -124,7 +130,9 @@ export function AureaLogo({
             fontWeight="500"
             letterSpacing="18"
           >
-            <tspan fill="#c9a84c">✹</tspan>  PUGLIA
+            <tspan fill="#c9a84c">✹</tspan>{" "}
+            PUGLIA{" "}
+            <tspan fill="#c9a84c">✹</tspan>
           </text>
 
           <text

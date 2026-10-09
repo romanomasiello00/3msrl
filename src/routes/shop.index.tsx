@@ -8,17 +8,17 @@ import { ReserveDialog } from "@/components/ReserveDialog";
 export const Route = createFileRoute("/shop/")({
   head: () => ({
     meta: [
-      { title: "Shop — The MMM S.r.l. Collection · Blanco, Reposado, Añejo" },
+      { title: "Shop — The 3 M S.r.l. Collection · Blanco, Reposado, Añejo" },
       {
         name: "description",
         content:
-          "Discover the MMM S.r.l. collection: Blanco, Reposado and Añejo. 100% blue agave, made in Mexico, rested for Puglia. Reserve your allocation.",
+          "Discover the 3 M S.r.l. collection: Blanco, Reposado and Añejo. 100% blue agave, made in Mexico, rested for Puglia. Reserve your allocation.",
       },
-      { property: "og:title", content: "Shop — The MMM S.r.l. Collection" },
+      { property: "og:title", content: "Shop — The 3 M S.r.l. Collection" },
       {
         property: "og:description",
         content:
-          "Three expressions of MMM S.r.l. tequila — Blanco, Reposado and Añejo. Limited allocations, reserved on request.",
+          "Three expressions of 3 M S.r.l. tequila — Blanco, Reposado and Añejo. Limited allocations, reserved on request.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/shop" },
@@ -30,15 +30,15 @@ export const Route = createFileRoute("/shop/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          name: "The MMM S.r.l. Collection",
+          name: "The 3 M S.r.l. Collection",
           description:
-            "Three expressions of MMM S.r.l. tequila — Blanco, Reposado and Añejo. 100% blue agave, made in Mexico, rested for Puglia.",
+            "Three expressions of 3 M S.r.l. tequila — Blanco, Reposado and Añejo. 100% blue agave, made in Mexico, rested for Puglia.",
           mainEntity: {
             "@type": "ItemList",
             itemListElement: products.map((p, i) => ({
               "@type": "ListItem",
               position: i + 1,
-              name: `MMM S.r.l. ${p.name}`,
+              name: `3 M S.r.l. ${p.name}`,
               url: `https://aurea-pugliese-spirit.lovable.app/shop/${p.slug}`,
             })),
           },
@@ -109,11 +109,11 @@ function ProductCard({
         to="/shop/$slug"
         params={{ slug: product.slug }}
         className="block"
-        aria-label={`MMM S.r.l. ${product.name}`}
+        aria-label={`3 M S.r.l. ${product.name}`}
       >
         <BottleFrame
           image={product.image}
-          alt={`MMM S.r.l. ${product.name}`}
+          alt={`3 M S.r.l. ${product.name}`}
           label={available ? t("shop.available") : t("shop.comingSoon")}
           placeholderNote={t("shop.photoSoon")}
         />

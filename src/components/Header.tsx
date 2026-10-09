@@ -52,7 +52,7 @@ export function Header() {
         </div>
 
         {/* Center wordmark */}
-        <Link to="/" className="flex items-center group" aria-label="MMM S.r.l. home">
+        <Link to="/" className="flex items-center group" aria-label="3 M S.r.l. home">
           <AureaLogo
             variant="compact"
             className="w-40 md:w-48 h-auto origin-center transition-transform duration-300 ease-out group-hover:opacity-90"

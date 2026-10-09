@@ -13,10 +13,10 @@ export const Route = createFileRoute("/shop/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Unavailable — MMM S.r.l." }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Unavailable — 3 M S.r.l." }, { name: "robots", content: "noindex" }] };
     }
     const p = loaderData.product;
-    const title = `MMM S.r.l. ${p.name} — ${p.ageing.en} · Tequila`;
+    const title = `3 M S.r.l. ${p.name} — ${p.ageing.en} · Tequila`;
     const description = p.intro.en;
     return {
       meta: [
@@ -34,10 +34,10 @@ export const Route = createFileRoute("/shop/$slug")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
-            name: `MMM S.r.l. ${p.name}`,
+            name: `3 M S.r.l. ${p.name}`,
             description,
             category: "Tequila",
-            brand: { "@type": "Brand", name: "MMM S.r.l." },
+            brand: { "@type": "Brand", name: "3 M S.r.l." },
             url: `https://aurea-pugliese-spirit.lovable.app/shop/${p.slug}`,
             ...(p.image ? { image: p.image } : {}),
             additionalProperty: [
@@ -75,7 +75,7 @@ function ProductPage() {
           <div className="fade-up md:sticky md:top-28">
             <BottleFrame
               image={product.image}
-              alt={`MMM S.r.l. ${product.name}`}
+              alt={`3 M S.r.l. ${product.name}`}
               label={available ? t("shop.available") : t("shop.comingSoon")}
               placeholderNote={t("shop.photoSoon")}
             />
@@ -84,7 +84,7 @@ function ProductPage() {
           <div className="fade-up" style={{ animationDelay: "120ms" }}>
             <p className="eyebrow mb-5">{product.subtitle[locale]}</p>
             <h1 className="font-display text-5xl italic text-navy md:text-6xl">
-              <span className="font-brand">MMM S.r.l.</span> {product.name}
+              <span className="font-brand">3 M S.r.l.</span> {product.name}
             </h1>
             <p className="mt-7 leading-relaxed text-navy/70">{product.intro[locale]}</p>
 
@@ -128,7 +128,7 @@ function ProductPage() {
                 <div className="w-28 shrink-0">
                   <BottleFrame
                     image={p.image}
-                    alt={`MMM S.r.l. ${p.name}`}
+                    alt={`3 M S.r.l. ${p.name}`}
                     placeholderNote={undefined}
                   />
                 </div>

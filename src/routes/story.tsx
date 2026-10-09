@@ -6,17 +6,17 @@ import storyPuglia from "@/assets/story-puglia.jpg";
 export const Route = createFileRoute("/story")({
   head: () => ({
     meta: [
-      { title: "The Story — MMM S.r.l." },
+      { title: "The Story — 3 M S.r.l." },
       {
         name: "description",
         content:
-          "Three friends, two lands. Luigi Marinaro, Romano Masiello and Gigi Marinaro on how MMM S.r.l. was born between Puglia and Mexico.",
+          "Three friends, two lands. Luigi Marinaro, Romano Masiello and Gigi Marinaro on how 3 M S.r.l. was born between Puglia and Mexico.",
       },
-      { property: "og:title", content: "The Story — MMM S.r.l." },
+      { property: "og:title", content: "The Story — 3 M S.r.l." },
       {
         property: "og:description",
         content:
-          "Three friends, two lands. How MMM S.r.l. was born between Puglia and Mexico.",
+          "Three friends, two lands. How 3 M S.r.l. was born between Puglia and Mexico.",
       },
       { property: "og:url", content: "/story" },
     ],
@@ -27,12 +27,12 @@ export const Route = createFileRoute("/story")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "AboutPage",
-          name: "The Story — MMM S.r.l.",
+          name: "The Story — 3 M S.r.l.",
           description:
-            "Three friends from Puglia and their love for Mexico led to MMM S.r.l., a tequila with a Mexican soul and a Pugliese spirit.",
+            "Three friends from Puglia and their love for Mexico led to 3 M S.r.l., a tequila with a Mexican soul and a Pugliese spirit.",
           mainEntity: {
             "@type": "Organization",
-            name: "MMM S.r.l.",
+            name: "3 M S.r.l.",
             slogan: "Where the golden soul of Mexico meets the timeless light of Puglia.",
             founder: [
               { "@type": "Person", name: "Luigi Marinaro" },

@@ -5,13 +5,13 @@ import { AureaMark } from "@/components/AureaMark";
 export const Route = createFileRoute("/expression")({
   head: () => ({
     meta: [
-      { title: "Reposado — MMM S.r.l." },
+      { title: "Reposado — 3 M S.r.l." },
       {
         name: "description",
         content:
-          "MMM S.r.l. Reposado. 100% blue agave, slow-cooked, copper-pot distilled, rested in oak. A reposado that speaks softly.",
+          "3 M S.r.l. Reposado. 100% blue agave, slow-cooked, copper-pot distilled, rested in oak. A reposado that speaks softly.",
       },
-      { property: "og:title", content: "MMM S.r.l. Reposado" },
+      { property: "og:title", content: "3 M S.r.l. Reposado" },
       {
         property: "og:description",
         content:
@@ -27,10 +27,10 @@ export const Route = createFileRoute("/expression")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
-          name: "MMM S.r.l. Reposado",
+          name: "3 M S.r.l. Reposado",
           description:
             "100% blue agave tequila, slow-cooked, copper-pot distilled and rested in oak barrels.",
-          brand: { "@type": "Brand", name: "MMM S.r.l." },
+          brand: { "@type": "Brand", name: "3 M S.r.l." },
           category: "Tequila Reposado",
         }),
       },
@@ -65,7 +65,7 @@ function ExpressionPage() {
               <AureaMark className="size-16 mt-4 relative" />
               <div className="space-y-4 relative">
                 <p className="font-brand text-4xl text-navy tracking-[0.05em]">
-                  MMM S.r.l.
+                  3 M S.r.l.
                 </p>
                 <div className="h-px w-12 bg-gold mx-auto" />
                 <p className="text-[10px] uppercase tracking-[0.5em] text-navy/70">Reposado</p>
