@@ -20,9 +20,9 @@ export const Route = createFileRoute("/")({
           "Where the golden soul of Mexico meets the timeless light of Puglia. A house of tequila brands, crafted with care and rooted in place.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://3msrl.vercel.app/" },
+      { property: "og:url", content: "https://3msrl-romanesky98s-projects.vercel.app/" },
     ],
-    links: [{ rel: "canonical", href: "https://3msrl.vercel.app/" }],
+    links: [{ rel: "canonical", href: "https://3msrl-romanesky98s-projects.vercel.app/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "3 M S.r.l.",
-          url: "https://3msrl.vercel.app/",
+          url: "https://3msrl-romanesky98s-projects.vercel.app/",
           description:
             "Where the golden soul of Mexico meets the timeless light of Puglia.",
         }),
