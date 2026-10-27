@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /legal/
 
-Sitemap: https://aurea-pugliese-spirit.lovable.app/sitemap.xml
+Sitemap: https://3msrl.vercel.app/sitemap.xml

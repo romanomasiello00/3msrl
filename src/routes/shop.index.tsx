@@ -39,7 +39,7 @@ export const Route = createFileRoute("/shop/")({
               "@type": "ListItem",
               position: i + 1,
               name: `3 M S.r.l. ${p.name}`,
-              url: `https://aurea-pugliese-spirit.lovable.app/shop/${p.slug}`,
+              url: `https://3msrl.vercel.app/shop/${p.slug}`,
             })),
           },
         }),

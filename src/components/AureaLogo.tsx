@@ -154,4 +154,4 @@ export function AureaLogo({
   );
 }
 
-export const aureaLogoUrl = "/aurea-tab-icon.svg";
+export const aureaLogoUrl = "/3m-tab-icon.svg";
