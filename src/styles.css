@@ -130,11 +130,11 @@
 @keyframes aurea-title-reveal {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translate3d(0, 24px, 0) scale(0.985);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0) scale(1);
   }
 }
 @keyframes aurea-fade-up {
@@ -148,7 +148,8 @@
 
 @utility title-reveal {
   letter-spacing: 0.02em;
-  animation: aurea-title-reveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 180ms both;
+  transform-origin: center;
+  animation: aurea-title-reveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) 220ms both;
 }
 @utility fade-up {
   animation: aurea-fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
