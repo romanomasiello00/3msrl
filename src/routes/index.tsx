@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "@/lib/i18n";
 import heroLandscape from "@/assets/hero-landscape.jpg";
 import storyHands from "@/assets/story-hands.jpg";
-import { AureaLogo } from "@/components/AureaLogo";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -20,9 +20,9 @@ export const Route = createFileRoute("/")({
           "Where the golden soul of Mexico meets the timeless light of Puglia. A house of tequila brands, crafted with care and rooted in place.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://3msrl-romanesky98s-projects.vercel.app/" },
+      { property: "og:url", content: "https://spiritsproject.it/" },
     ],
-    links: [{ rel: "canonical", href: "https://3msrl-romanesky98s-projects.vercel.app/" }],
+    links: [{ rel: "canonical", href: "https://spiritsproject.it/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "3 M S.r.l.",
-          url: "https://3msrl-romanesky98s-projects.vercel.app/",
+          url: "https://spiritsproject.it/",
           description:
             "Where the golden soul of Mexico meets the timeless light of Puglia.",
         }),
@@ -48,7 +48,7 @@ function Home() {
       {/* HERO */}
       <section className="relative pt-16 md:pt-24 pb-24 md:pb-32 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-          <AureaLogo className="w-80 md:w-[30rem] lg:w-[38rem] h-auto mb-10 fade-in" />
+          <BrandLogo className="w-80 md:w-[30rem] lg:w-[38rem] h-auto mb-10 fade-in" />
 
           <div className="mb-8 py-2 px-4 border border-gold/40 rounded-full fade-in">
             <span className="text-[10px] font-medium uppercase tracking-[0.35em] text-gold-ink">

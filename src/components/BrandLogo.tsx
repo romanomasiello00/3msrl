@@ -7,7 +7,7 @@ interface Props {
 }
 
 /**
- * Aurea brand lockup — SVG so it stays sharp at every size.
+ * 3 M S.r.l. brand lockup — SVG so it stays sharp at every size.
  *
  * Emblem construction (matches the reference the client approved):
  *   – gold 8-point star outline
@@ -18,7 +18,7 @@ interface Props {
  * variant="full"    → emblem + 3 M S.r.l. + ✹ PUGLIA ✹ + SOLE • TERRA • MARE • TEMPO
  * variant="compact" → emblem + ✹ PUGLIA ✹ (used in the sticky header)
  */
-export function AureaLogo({
+export function BrandLogo({
   className,
   alt = "3 M S.r.l. Puglia",
   style,
@@ -39,7 +39,7 @@ export function AureaLogo({
     >
       <defs>
         {/* Single tapered needle ray. Rotated 28× around the emblem center (450, 200). */}
-        <path id="aurea-ray" d="M450 32 L462 137 L450 164 L438 137 Z" />
+        <path id="brand-ray" d="M450 32 L462 137 L450 164 L438 137 Z" />
       </defs>
 
       {/* ---------- EMBLEM (centered at 450, 200) ---------- */}
@@ -64,7 +64,7 @@ export function AureaLogo({
           {Array.from({ length: 28 }).map((_, i) => (
             <use
               key={`ray-${i}`}
-              href="#aurea-ray"
+              href="#brand-ray"
               transform={`rotate(${i * (360 / 28)} 450 200)`}
               opacity={i % 2 ? 0.58 : 0.9}
             />
@@ -99,7 +99,7 @@ export function AureaLogo({
           <tspan fill="#c9a84c" fontSize="56" fontWeight="600" dy="-4">
             ✹
           </tspan>{" "}
-          PUGLIA{" "}
+          Puglia{" "}
           <tspan fill="#c9a84c" fontSize="56" fontWeight="600">
             ✹
           </tspan>
@@ -129,7 +129,7 @@ export function AureaLogo({
             letterSpacing="5"
           >
             <tspan fill="#c9a84c">✹</tspan>{" "}
-            PUGLIA{" "}
+            Puglia{" "}
             <tspan fill="#c9a84c">✹</tspan>
           </text>
 
@@ -151,4 +151,4 @@ export function AureaLogo({
   );
 }
 
-export const aureaLogoUrl = "/3m-tab-icon.svg";
+export const brandLogoUrl = "/3m-tab-icon.svg";

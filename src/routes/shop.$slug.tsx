@@ -38,7 +38,7 @@ export const Route = createFileRoute("/shop/$slug")({
             description,
             category: "Tequila",
             brand: { "@type": "Brand", name: "3 M S.r.l." },
-            url: `https://3msrl-romanesky98s-projects.vercel.app/shop/${p.slug}`,
+            url: `https://spiritsproject.it/shop/${p.slug}`,
             ...(p.image ? { image: p.image } : {}),
             additionalProperty: [
               { "@type": "PropertyValue", name: "Agave", value: p.agave.en },

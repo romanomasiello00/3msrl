@@ -7,24 +7,24 @@ interface Props {
 }
 
 /**
- * Aurea brand lockup — SVG so it stays sharp at every size.
+ * 3 M S.r.l. brand lockup — SVG so it stays sharp at every size.
  *
- * Layout matches the aureatequila.it (Vercel) version:
- *   emblem  →  AUREA wordmark  →  TEQUILA ✹ PUGLIA  →  SOLE • TERRA • MARE • TEMPO
+ * Layout matches the approved 3 M S.r.l. version:
+ *   emblem  →  3 M S.r.l. wordmark  →  TEQUILA ✹ PUGLIA  →  SOLE • TERRA • MARE • TEMPO
  * Wordmark uses Cormorant Garamond (the serif from the Lovable version).
  *
  * variant="compact" (header): emblem + "TEQUILA • PUGLIA" only.
  */
-export function AureaLogo({
+export function BrandLogoNeedle({
   className,
-  alt = "Aurea Tequila Puglia",
+  alt = "3 M S.r.l. Tequila Puglia",
   style,
   variant = "full",
 }: Props) {
   const isCompact = variant === "compact";
 
   // Compact viewport: emblem (top ~380 tall) + small caption strip.
-  // Full viewport: emblem + AUREA + tequila/puglia + sole/terra/mare/tempo line.
+  // Full viewport: emblem + 3 M S.r.l. + tequila/puglia + sole/terra/mare/tempo line.
   const viewBox = isCompact ? "0 0 900 470" : "0 0 900 780";
 
   return (
@@ -39,9 +39,9 @@ export function AureaLogo({
     >
       <defs>
         {/* Long thin needle-ray, tapered at both ends. */}
-        <path id="aurea-ray-long" d="M450 6 L452 96 L450 202 L448 96 Z" />
+        <path id="brand-ray-long" d="M450 6 L452 96 L450 202 L448 96 Z" />
         {/* Shorter secondary needle for the half-step ring. */}
-        <path id="aurea-ray-short" d="M450 40 L451.5 110 L450 190 L448.5 110 Z" />
+        <path id="brand-ray-short" d="M450 40 L451.5 110 L450 190 L448.5 110 Z" />
       </defs>
 
       {/* ---------- EMBLEM ---------- */}
@@ -51,7 +51,7 @@ export function AureaLogo({
           {Array.from({ length: 24 }).map((_, i) => (
             <use
               key={`ra-${i}`}
-              href="#aurea-ray-long"
+              href="#brand-ray-long"
               transform={`rotate(${i * (360 / 24)} 450 200)`}
             />
           ))}
@@ -59,7 +59,7 @@ export function AureaLogo({
           {Array.from({ length: 24 }).map((_, i) => (
             <use
               key={`rb-${i}`}
-              href="#aurea-ray-short"
+              href="#brand-ray-short"
               transform={`rotate(${i * (360 / 24) + 360 / 48} 450 200)`}
               opacity={0.75}
             />
@@ -109,7 +109,7 @@ export function AureaLogo({
             fontWeight="500"
             letterSpacing="32"
           >
-            AUREA
+            3 M S.r.l.
           </text>
           <text
             x="450"
@@ -142,4 +142,4 @@ export function AureaLogo({
   );
 }
 
-export const aureaLogoUrl = "/aurea-tab-icon.svg";
+export const brandLogoUrl = "/3m-tab-icon.svg";

@@ -7,9 +7,9 @@ interface Props {
 }
 
 /**
- * Full Aurea brand logo rendered as vector/text so it stays crisp at every size.
+ * Full 3 M S.r.l. brand logo rendered as vector/text so it stays crisp at every size.
  */
-export function AureaLogo({ className, alt = "Aurea Tequila Puglia", style, variant = "full" }: Props) {
+export function BrandLogoLovable({ className, alt = "3 M S.r.l. Tequila Puglia", style, variant = "full" }: Props) {
   const isCompact = variant === "compact";
 
   return (
@@ -53,7 +53,7 @@ export function AureaLogo({ className, alt = "Aurea Tequila Puglia", style, vari
         fontWeight="500"
         letterSpacing="30"
       >
-        AUREA
+        3 M S.r.l.
       </text>
       <text
         x="450"
@@ -86,4 +86,4 @@ export function AureaLogo({ className, alt = "Aurea Tequila Puglia", style, vari
   );
 }
 
-export const aureaLogoUrl = "/aurea-tab-icon.svg";
+export const brandLogoUrl = "/3m-tab-icon.svg";

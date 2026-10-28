@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "@/lib/i18n";
-import { AureaMark } from "./AureaMark";
+import { BrandMark } from "./BrandMark";
 
-const STORAGE_KEY = "aurea:age-verified";
+const STORAGE_KEY = "3m:age-verified";
 
 export function AgeGate() {
   const { t } = useTranslation();
@@ -38,7 +38,7 @@ export function AgeGate() {
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(15,27,61,0.06)_100%)]" />
       <div className="relative w-full max-w-lg mx-4 text-center">
-        <AureaMark className="mx-auto size-16 mb-8" />
+        <BrandMark className="mx-auto size-16 mb-8" />
         <p className="eyebrow font-brand mb-6">3 M S.r.l. · Tequila · Puglia</p>
         <h2
           id="age-gate-title"

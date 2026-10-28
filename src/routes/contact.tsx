@@ -58,7 +58,7 @@ function ContactPage() {
     // Persist locally as a fallback and simulate submission.
     // Wiring to Cloud + Resend is planned as follow-up.
     try {
-      const key = "aurea:contact-log";
+      const key = "3m:contact-log";
       const prev = JSON.parse(localStorage.getItem(key) || "[]");
       prev.push({ ...parsed.data, at: new Date().toISOString() });
       localStorage.setItem(key, JSON.stringify(prev));

@@ -5,10 +5,10 @@ interface Props {
 }
 
 /**
- * Aurea sunburst mark derived from the brand logo.
+ * 3 M S.r.l. sunburst mark derived from the brand logo.
  * Pure SVG so it stays crisp and inherits colors.
  */
-export function AureaMark({ className, gold = "#c9a84c", navy = "#0f1b3d" }: Props) {
+export function BrandMark({ className, gold = "#c9a84c", navy = "#0f1b3d" }: Props) {
   return (
     <svg
       viewBox="0 0 100 100"
@@ -18,7 +18,7 @@ export function AureaMark({ className, gold = "#c9a84c", navy = "#0f1b3d" }: Pro
       shapeRendering="geometricPrecision"
     >
       <defs>
-        <path id="aurea-ray" d="M50 13 L53.2 47 L50 55 L46.8 47 Z" />
+        <path id="brand-ray" d="M50 13 L53.2 47 L50 55 L46.8 47 Z" />
       </defs>
 
       <g stroke={gold} strokeWidth="1.1" strokeLinejoin="round" strokeLinecap="round" fill="none">
@@ -28,7 +28,7 @@ export function AureaMark({ className, gold = "#c9a84c", navy = "#0f1b3d" }: Pro
 
       <g fill={gold} opacity="0.9">
         {Array.from({ length: 24 }).map((_, i) => (
-          <use key={i} href="#aurea-ray" transform={`rotate(${i * 15} 50 50)`} opacity={i % 2 ? 0.62 : 0.9} />
+          <use key={i} href="#brand-ray" transform={`rotate(${i * 15} 50 50)`} opacity={i % 2 ? 0.62 : 0.9} />
         ))}
       </g>
 
@@ -57,11 +57,11 @@ export function AureaMark({ className, gold = "#c9a84c", navy = "#0f1b3d" }: Pro
   );
 }
 
-/** Full stacked wordmark: mark + AUREA + tagline */
-export function AureaWordmark({ className }: { className?: string }) {
+/** Full stacked wordmark: mark + 3 M S.r.l. + tagline */
+export function BrandWordmark({ className }: { className?: string }) {
   return (
     <div className={"flex flex-col items-center gap-1 " + (className ?? "")}>
-      <AureaMark className="size-8" />
+      <BrandMark className="size-8" />
       <span className="font-brand text-2xl text-navy leading-none">
         3 M S.r.l.
       </span>

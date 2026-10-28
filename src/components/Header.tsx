@@ -1,11 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { useTranslation } from "@/lib/i18n";
-import { AureaLogo } from "./AureaLogo";
+import { BrandLogo } from "./BrandLogo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const linkCls =
-  "relative text-[10px] font-medium uppercase tracking-[0.25em] text-navy transition-colors hover:text-gold after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-gold after:transition-[width] after:duration-500 hover:after:w-full";
+  "inline-flex min-h-10 items-center rounded-full border border-navy/15 px-4 text-[10px] font-medium uppercase tracking-[0.2em] text-navy transition-[background-color,border-color,color,transform] duration-300 hover:-translate-y-px hover:border-navy hover:bg-navy hover:text-crema focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold";
 
 export function Header() {
   const { t } = useTranslation();
@@ -39,7 +39,7 @@ export function Header() {
     >
       <nav className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between gap-8">
         {/* Left nav (desktop) */}
-        <div className="hidden md:flex gap-8 flex-1 justify-start">
+        <div className="hidden md:flex gap-2 flex-1 justify-start">
           <Link to="/tequila-1" className={linkCls}>
             {t("nav.tequila1")}
           </Link>
@@ -53,7 +53,7 @@ export function Header() {
 
         {/* Center wordmark */}
         <Link to="/" className="flex items-center group" aria-label="3 M S.r.l. home">
-          <AureaLogo
+          <BrandLogo
             variant="compact"
             className="w-40 md:w-48 h-auto origin-center transition-transform duration-300 ease-out group-hover:opacity-90"
             style={{ transform: `scale(${logoScale})` }}
@@ -63,7 +63,7 @@ export function Header() {
 
 
         {/* Right nav (desktop) */}
-        <div className="hidden md:flex gap-8 flex-1 justify-end items-center">
+        <div className="hidden md:flex gap-2 flex-1 justify-end items-center">
           <Link to="/story" className={linkCls}>
             {t("nav.story")}
           </Link>

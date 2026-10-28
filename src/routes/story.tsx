@@ -56,12 +56,14 @@ function StoryPage() {
       image: "/email/luigi-ritratto.png",
       role: t("story.lm.role"),
       bio: t("story.lm.bio"),
+      email: "luigi@spititsproject.it",
     },
     {
       name: "Romano Masiello",
       image: "/email/romano-ritratto.png",
       role: t("story.rm.role"),
       bio: t("story.rm.bio"),
+      email: "romano.masiello@spititsproject.it",
     },
     {
       name: "Luigi Pio Marinaro",
@@ -137,6 +139,14 @@ function StoryPage() {
                 <p className="eyebrow mb-3">{f.role}</p>
                 <h3 className="font-display text-2xl text-navy mb-3">{f.name}</h3>
                 <p className="text-sm leading-relaxed text-navy/70">{f.bio}</p>
+                {f.email && (
+                  <a
+                    href={`mailto:${f.email}`}
+                    className="mt-5 text-[10px] font-medium tracking-[0.12em] text-gold-ink hover:text-navy transition-colors"
+                  >
+                    {f.email}
+                  </a>
+                )}
               </div>
             ))}
           </div>

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "@/lib/i18n";
-import { AureaMark } from "@/components/AureaMark";
+import { BrandMark } from "@/components/BrandMark";
 
 export const Route = createFileRoute("/expression")({
   head: () => ({
@@ -62,7 +62,7 @@ function ExpressionPage() {
           <div className="lg:col-span-2 flex flex-col items-center">
             <div className="relative w-full max-w-sm aspect-[3/4] bg-soft-white ring-1 ring-navy/10 rounded-md p-10 flex flex-col items-center justify-between text-center overflow-hidden">
               <div className="absolute inset-4 border border-gold/30 rounded-sm pointer-events-none" />
-              <AureaMark className="size-16 mt-4 relative" />
+              <BrandMark className="size-16 mt-4 relative" />
               <div className="space-y-4 relative">
                 <p className="font-brand text-4xl text-navy tracking-[0.05em]">
                   3 M S.r.l.

@@ -30,7 +30,7 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  /* Aurea brand semantic tokens */
+  /* 3 M S.r.l. brand semantic tokens */
   --color-crema: var(--crema);
   --color-soft-white: var(--soft-white);
   --color-navy: var(--navy);
@@ -47,7 +47,7 @@
 :root {
   --radius: 0.5rem;
 
-  /* Aurea palette */
+  /* 3 M S.r.l. palette */
   --crema: #f5efe4;
   --soft-white: #fbf8f2;
   --navy: #0f1b3d;
@@ -57,7 +57,7 @@
   --terra: #8b6f5e;
   --sand: #d9c4a3;
 
-  /* shadcn semantic mapping onto Aurea palette */
+  /* shadcn semantic mapping onto the 3 M S.r.l. palette */
   --background: var(--crema);
   --foreground: var(--navy);
   --card: var(--soft-white);
@@ -127,7 +127,7 @@
   }
 }
 
-@keyframes aurea-title-reveal {
+@keyframes brand-title-reveal {
   from {
     opacity: 0;
     transform: translate3d(0, 24px, 0) scale(0.985);
@@ -137,11 +137,11 @@
     transform: translate3d(0, 0, 0) scale(1);
   }
 }
-@keyframes aurea-fade-up {
+@keyframes brand-fade-up {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@keyframes aurea-fade {
+@keyframes brand-fade {
   from { opacity: 0; }
   to { opacity: 1; }
 }
@@ -149,13 +149,13 @@
 @utility title-reveal {
   letter-spacing: 0.02em;
   transform-origin: center;
-  animation: aurea-title-reveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) 220ms both;
+  animation: brand-title-reveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) 220ms both;
 }
 @utility fade-up {
-  animation: aurea-fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: brand-fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 @utility fade-in {
-  animation: aurea-fade 1.4s ease both;
+  animation: brand-fade 1.4s ease both;
 }
 @utility nav-underline {
   position: relative;

@@ -112,4 +112,4 @@ export function getProduct(slug: string) {
   return products.find((p) => p.slug === slug);
 }
 
-export const RESERVE_EMAIL = "info@aureatequila.it";
+export const RESERVE_EMAIL = "amministrazione@spititsproject.it";

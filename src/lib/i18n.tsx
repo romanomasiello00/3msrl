@@ -287,7 +287,7 @@ interface I18nCtx {
 
 const I18nContext = createContext<I18nCtx | null>(null);
 
-const STORAGE_KEY = "aurea:locale";
+const STORAGE_KEY = "3m:locale";
 
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>("en");
