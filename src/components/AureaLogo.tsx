@@ -89,13 +89,12 @@ export function AureaLogo({
       {isCompact ? (
         <text
           x="450"
-          y="440"
+          y="438"
           textAnchor="middle"
           fill="#0f1b3d"
-          fontFamily="'Cormorant Garamond', Georgia, serif"
-          fontSize="46"
-          fontWeight="500"
-          letterSpacing="14"
+          fontFamily="'Nothing You Could Do', cursive"
+          fontSize="58"
+          letterSpacing="4"
         >
           <tspan fill="#c9a84c" fontSize="56" fontWeight="600" dy="-4">
             ✹
@@ -122,13 +121,12 @@ export function AureaLogo({
 
           <text
             x="450"
-            y="620"
+            y="625"
             textAnchor="middle"
             fill="#0f1b3d"
-            fontFamily="'Cormorant Garamond', Georgia, serif"
-            fontSize="46"
-            fontWeight="500"
-            letterSpacing="18"
+            fontFamily="'Nothing You Could Do', cursive"
+            fontSize="64"
+            letterSpacing="5"
           >
             <tspan fill="#c9a84c">✹</tspan>{" "}
             PUGLIA{" "}
@@ -140,13 +138,12 @@ export function AureaLogo({
             y="700"
             textAnchor="middle"
             fill="#0f1b3d"
-            fontFamily="Inter, Arial, sans-serif"
-            fontSize="30"
-            fontWeight="600"
-            letterSpacing="14"
+            fontFamily="'Nothing You Could Do', cursive"
+            fontSize="37"
+            letterSpacing="2"
             opacity="0.92"
           >
-            SOLE  •  TERRA  •  MARE  •  TEMPO
+            Sole · Terra · Mare · Tempo
           </text>
         </>
       )}
