@@ -115,7 +115,9 @@ function StoryPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="eyebrow mb-6">{t("story.founders")}</p>
-            <h2 className="font-display text-3xl md:text-4xl text-navy italic">Three friends, two lands</h2>
+            <h2 className="font-display text-3xl md:text-4xl text-navy italic">
+              {t("story.founders.title")}
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">

@@ -65,7 +65,7 @@ const en: Dict = {
   "home.story.eyebrow": "Heritage",
   "home.story.title": "Three friends, two lands",
   "home.story.body":
-    "Luigi, Romano and Gigi have always shared the same land — Puglia — and the same craft passed down through generations. From those roots grew a larger passion: tequila as faithful as possible to Mexican tradition, yet with an eye turned to Puglia.",
+    "Luigi, Romano and Luigi Pio have always shared the same land — Puglia — and the same craft passed down through generations. From those roots grew a larger passion: tequila as faithful as possible to Mexican tradition, yet with an eye turned to Puglia.",
   "home.story.cta": "Read the story",
 
   "home.brands.eyebrow": "Our Brands",
@@ -82,6 +82,7 @@ const en: Dict = {
   "story.p3":
     "So, in recent years, they set out on a new adventure: to create a tequila as faithful as possible to Mexican tradition, yet with an eye turned to Puglia. 3 M S.r.l. is made in Mexico, in the heart of the blue agave. It is in Puglia that it finds its Mediterranean home.",
   "story.founders": "The founders",
+  "story.founders.title": "Three friends, two lands",
   "story.lm.role": "CO-FOUNDER",
   "story.rm.role": "CO-FOUNDER",
   "story.gm.role": "CO-FOUNDER",
@@ -196,7 +197,7 @@ const it: Dict = {
   "home.story.eyebrow": "Origini",
   "home.story.title": "Tre amici, due terre",
   "home.story.body":
-    "Luigi, Romano e Gigi condividono da sempre la stessa terra — la Puglia — e lo stesso mestiere tramandato di generazione in generazione. Da queste radici è nata una passione più grande: la tequila, fedele alla tradizione messicana, con lo sguardo rivolto alla Puglia.",
+    "Luigi, Romano e Luigi Pio condividono da sempre la stessa terra — la Puglia — e lo stesso mestiere tramandato di generazione in generazione. Da queste radici è nata una passione più grande: la tequila, fedele alla tradizione messicana, con lo sguardo rivolto alla Puglia.",
   "home.story.cta": "Leggi la storia",
 
   "home.brands.eyebrow": "I Nostri Marchi",
@@ -213,6 +214,7 @@ const it: Dict = {
   "story.p3":
     "Così, negli ultimi anni, hanno intrapreso una nuova avventura: creare una tequila il più possibile fedele alla tradizione messicana, ma con uno sguardo rivolto alla Puglia. 3 M S.r.l. è prodotta in Messico, nel cuore dell'agave blu. È in Puglia che trova la sua casa mediterranea.",
   "story.founders": "I fondatori",
+  "story.founders.title": "Tre amici, due terre",
   "story.lm.role": "CO-FOUNDER",
   "story.rm.role": "CO-FOUNDER",
   "story.gm.role": "CO-FOUNDER",
