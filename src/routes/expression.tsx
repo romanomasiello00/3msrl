@@ -5,7 +5,7 @@ import { BrandMark } from "@/components/BrandMark";
 export const Route = createFileRoute("/expression")({
   head: () => ({
     meta: [
-      { title: "Reposado — 3 M S.r.l." },
+      { title: "Reposado, 3 M S.r.l." },
       {
         name: "description",
         content:
@@ -47,7 +47,7 @@ function ExpressionPage() {
       <section className="pt-24 pb-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <p className="eyebrow mb-6">{t("expression.eyebrow")}</p>
-          <h1 className="font-display text-6xl md:text-8xl font-medium text-navy italic leading-none mb-8">
+          <h1 className="font-script text-6xl md:text-8xl text-navy mb-8">
             {t("expression.title")}
           </h1>
           <p className="text-lg text-navy/70 max-w-2xl mx-auto leading-relaxed">
@@ -70,7 +70,7 @@ function ExpressionPage() {
                 <div className="h-px w-12 bg-gold mx-auto" />
                 <p className="text-[10px] uppercase tracking-[0.5em] text-navy/70">Reposado</p>
                 <p className="text-[9px] uppercase tracking-[0.35em] text-navy/50 pt-2">
-                  Tequila · Puglia
+                  Tequila, Puglia
                 </p>
               </div>
               <div className="relative">

@@ -5,7 +5,7 @@ import { BrandLogo } from "./BrandLogo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const linkCls =
-  "inline-flex min-h-10 items-center rounded-full border border-navy/15 px-4 text-[10px] font-medium uppercase tracking-[0.2em] text-navy transition-[background-color,border-color,color,transform] duration-300 hover:-translate-y-px hover:border-navy hover:bg-navy hover:text-crema focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold";
+  "ornate ornate-interactive ornate-label inline-flex min-h-10 items-center px-4 text-[12px] tracking-[0.16em] text-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold";
 
 export function Header() {
   const { t } = useTranslation();

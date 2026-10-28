@@ -66,7 +66,7 @@ export function BrandWordmark({ className }: { className?: string }) {
         3 M S.r.l.
       </span>
       <span className="text-[8px] uppercase tracking-[0.4em] text-gold-ink">
-        Tequila · Puglia
+        Tequila, Puglia
       </span>
     </div>
   );

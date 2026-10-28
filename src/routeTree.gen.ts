@@ -9,47 +9,22 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as StoryRouteImport } from './routes/story'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ShopRouteImport } from './routes/shop'
-import { Route as ExpressionRouteImport } from './routes/expression'
-import { Route as Tequila2RouteImport } from './routes/tequila-2'
-import { Route as Tequila1RouteImport } from './routes/tequila-1'
-import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ExpressionRouteImport } from './routes/expression'
+import { Route as ShopRouteImport } from './routes/shop'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as StoryRouteImport } from './routes/story'
+import { Route as Tequila1RouteImport } from './routes/tequila-1'
+import { Route as Tequila2RouteImport } from './routes/tequila-2'
+import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
+import { Route as LegalTermsRouteImport } from './routes/legal.terms'
 import { Route as ShopIndexRouteImport } from './routes/shop.index'
 import { Route as ShopSlugRouteImport } from './routes/shop.$slug'
-import { Route as LegalTermsRouteImport } from './routes/legal.terms'
-import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
 
-const StoryRoute = StoryRouteImport.update({
-  id: '/story',
-  path: '/story',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ShopRoute = ShopRouteImport.update({
-  id: '/shop',
-  path: '/shop',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ExpressionRoute = ExpressionRouteImport.update({
-  id: '/expression',
-  path: '/expression',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Tequila2Route = Tequila2RouteImport.update({
-  id: '/tequila-2',
-  path: '/tequila-2',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Tequila1Route = Tequila1RouteImport.update({
-  id: '/tequila-1',
-  path: '/tequila-1',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -57,9 +32,44 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ExpressionRoute = ExpressionRouteImport.update({
+  id: '/expression',
+  path: '/expression',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopRoute = ShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoryRoute = StoryRouteImport.update({
+  id: '/story',
+  path: '/story',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Tequila1Route = Tequila1RouteImport.update({
+  id: '/tequila-1',
+  path: '/tequila-1',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Tequila2Route = Tequila2RouteImport.update({
+  id: '/tequila-2',
+  path: '/tequila-2',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalPrivacyRoute = LegalPrivacyRouteImport.update({
+  id: '/legal/privacy',
+  path: '/legal/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalTermsRoute = LegalTermsRouteImport.update({
+  id: '/legal/terms',
+  path: '/legal/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ShopIndexRoute = ShopIndexRouteImport.update({
@@ -72,26 +82,16 @@ const ShopSlugRoute = ShopSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => ShopRoute,
 } as any)
-const LegalTermsRoute = LegalTermsRouteImport.update({
-  id: '/legal/terms',
-  path: '/legal/terms',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LegalPrivacyRoute = LegalPrivacyRouteImport.update({
-  id: '/legal/privacy',
-  path: '/legal/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
-  '/tequila-1': typeof Tequila1Route
-  '/tequila-2': typeof Tequila2Route
   '/expression': typeof ExpressionRoute
   '/shop': typeof ShopRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/story': typeof StoryRoute
+  '/tequila-1': typeof Tequila1Route
+  '/tequila-2': typeof Tequila2Route
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
   '/shop/$slug': typeof ShopSlugRoute
@@ -100,11 +100,11 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
-  '/tequila-1': typeof Tequila1Route
-  '/tequila-2': typeof Tequila2Route
   '/expression': typeof ExpressionRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/story': typeof StoryRoute
+  '/tequila-1': typeof Tequila1Route
+  '/tequila-2': typeof Tequila2Route
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
   '/shop/$slug': typeof ShopSlugRoute
@@ -114,12 +114,12 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
-  '/tequila-1': typeof Tequila1Route
-  '/tequila-2': typeof Tequila2Route
   '/expression': typeof ExpressionRoute
   '/shop': typeof ShopRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/story': typeof StoryRoute
+  '/tequila-1': typeof Tequila1Route
+  '/tequila-2': typeof Tequila2Route
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
   '/shop/$slug': typeof ShopSlugRoute
@@ -130,12 +130,12 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/contact'
-    | '/tequila-1'
-    | '/tequila-2'
     | '/expression'
     | '/shop'
     | '/sitemap.xml'
     | '/story'
+    | '/tequila-1'
+    | '/tequila-2'
     | '/legal/privacy'
     | '/legal/terms'
     | '/shop/$slug'
@@ -144,11 +144,11 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/contact'
-    | '/tequila-1'
-    | '/tequila-2'
     | '/expression'
     | '/sitemap.xml'
     | '/story'
+    | '/tequila-1'
+    | '/tequila-2'
     | '/legal/privacy'
     | '/legal/terms'
     | '/shop/$slug'
@@ -157,12 +157,12 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/contact'
-    | '/tequila-1'
-    | '/tequila-2'
     | '/expression'
     | '/shop'
     | '/sitemap.xml'
     | '/story'
+    | '/tequila-1'
+    | '/tequila-2'
     | '/legal/privacy'
     | '/legal/terms'
     | '/shop/$slug'
@@ -172,58 +172,23 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
-  Tequila1Route: typeof Tequila1Route
-  Tequila2Route: typeof Tequila2Route
   ExpressionRoute: typeof ExpressionRoute
   ShopRoute: typeof ShopRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   StoryRoute: typeof StoryRoute
+  Tequila1Route: typeof Tequila1Route
+  Tequila2Route: typeof Tequila2Route
   LegalPrivacyRoute: typeof LegalPrivacyRoute
   LegalTermsRoute: typeof LegalTermsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/story': {
-      id: '/story'
-      path: '/story'
-      fullPath: '/story'
-      preLoaderRoute: typeof StoryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/shop': {
-      id: '/shop'
-      path: '/shop'
-      fullPath: '/shop'
-      preLoaderRoute: typeof ShopRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/expression': {
-      id: '/expression'
-      path: '/expression'
-      fullPath: '/expression'
-      preLoaderRoute: typeof ExpressionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tequila-2': {
-      id: '/tequila-2'
-      path: '/tequila-2'
-      fullPath: '/tequila-2'
-      preLoaderRoute: typeof Tequila2RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tequila-1': {
-      id: '/tequila-1'
-      path: '/tequila-1'
-      fullPath: '/tequila-1'
-      preLoaderRoute: typeof Tequila1RouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -233,11 +198,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/expression': {
+      id: '/expression'
+      path: '/expression'
+      fullPath: '/expression'
+      preLoaderRoute: typeof ExpressionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop': {
+      id: '/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/story': {
+      id: '/story'
+      path: '/story'
+      fullPath: '/story'
+      preLoaderRoute: typeof StoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tequila-1': {
+      id: '/tequila-1'
+      path: '/tequila-1'
+      fullPath: '/tequila-1'
+      preLoaderRoute: typeof Tequila1RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tequila-2': {
+      id: '/tequila-2'
+      path: '/tequila-2'
+      fullPath: '/tequila-2'
+      preLoaderRoute: typeof Tequila2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal/privacy': {
+      id: '/legal/privacy'
+      path: '/legal/privacy'
+      fullPath: '/legal/privacy'
+      preLoaderRoute: typeof LegalPrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal/terms': {
+      id: '/legal/terms'
+      path: '/legal/terms'
+      fullPath: '/legal/terms'
+      preLoaderRoute: typeof LegalTermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/shop/': {
@@ -253,20 +267,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/shop/$slug'
       preLoaderRoute: typeof ShopSlugRouteImport
       parentRoute: typeof ShopRoute
-    }
-    '/legal/terms': {
-      id: '/legal/terms'
-      path: '/legal/terms'
-      fullPath: '/legal/terms'
-      preLoaderRoute: typeof LegalTermsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/legal/privacy': {
-      id: '/legal/privacy'
-      path: '/legal/privacy'
-      fullPath: '/legal/privacy'
-      preLoaderRoute: typeof LegalPrivacyRouteImport
-      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -286,15 +286,25 @@ const ShopRouteWithChildren = ShopRoute._addFileChildren(ShopRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
-  Tequila1Route: Tequila1Route,
-  Tequila2Route: Tequila2Route,
   ExpressionRoute: ExpressionRoute,
   ShopRoute: ShopRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   StoryRoute: StoryRoute,
+  Tequila1Route: Tequila1Route,
+  Tequila2Route: Tequila2Route,
   LegalPrivacyRoute: LegalPrivacyRoute,
   LegalTermsRoute: LegalTermsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

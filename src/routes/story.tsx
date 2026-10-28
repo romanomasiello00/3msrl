@@ -6,13 +6,13 @@ import storyPuglia from "@/assets/story-puglia.jpg";
 export const Route = createFileRoute("/story")({
   head: () => ({
     meta: [
-      { title: "The Story — 3 M S.r.l." },
+      { title: "The Story, 3 M S.r.l." },
       {
         name: "description",
         content:
           "Three friends, two lands. Luigi Marinaro, Romano Masiello and Luigi Pio Marinaro on how 3 M S.r.l. was born between Puglia and Mexico.",
       },
-      { property: "og:title", content: "The Story — 3 M S.r.l." },
+      { property: "og:title", content: "The Story, 3 M S.r.l." },
       {
         property: "og:description",
         content:
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/story")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "AboutPage",
-          name: "The Story — 3 M S.r.l.",
+          name: "The Story, 3 M S.r.l.",
           description:
             "Three friends from Puglia and their love for Mexico led to 3 M S.r.l., a tequila with a Mexican soul and a Pugliese spirit.",
           mainEntity: {
@@ -78,7 +78,7 @@ function StoryPage() {
       <section className="pt-24 pb-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <p className="eyebrow mb-6">{t("story.eyebrow")}</p>
-          <h1 className="font-display text-5xl md:text-7xl font-medium text-navy leading-[1.05] text-balance mb-10">
+          <h1 className="font-script text-5xl md:text-7xl text-navy text-balance mb-10">
             {t("story.title")}
           </h1>
         </div>
@@ -105,9 +105,9 @@ function StoryPage() {
         </div>
 
         <div className="mt-16 flex justify-center">
-          <div className="px-6 py-2 border border-gold/40 rounded-full">
-            <span className="text-[10px] font-medium uppercase tracking-[0.4em] text-gold-ink">
-              Hecho en México · Imported to Puglia
+          <div className="ornate ornate-stars max-w-full px-8 py-3 text-center">
+            <span className="ornate-label text-[13px] tracking-[0.18em] md:tracking-[0.3em]">
+              Hecho en México, Imported to Puglia
             </span>
           </div>
         </div>
@@ -117,7 +117,7 @@ function StoryPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="eyebrow mb-6">{t("story.founders")}</p>
-            <h2 className="font-display text-3xl md:text-4xl text-navy italic">
+            <h2 className="font-script text-3xl md:text-4xl text-navy">
               {t("story.founders.title")}
             </h2>
           </div>

@@ -1,25 +1,24 @@
-import { useTranslation, type Locale } from "@/lib/i18n";
+import { LOCALES, useTranslation } from "@/lib/i18n";
 
 export function LanguageSwitcher({ className = "" }: { className?: string }) {
   const { locale, setLocale } = useTranslation();
-  const opts: Locale[] = ["en", "it"];
   return (
     <div
       className={
-        "inline-flex items-center rounded-full border border-navy/20 bg-crema p-1 text-[10px] font-medium uppercase tracking-[0.15em] " +
+        "ornate ornate-label inline-flex items-center p-1.5 text-[12px] tracking-[0.14em] " +
         className
       }
       role="group"
       aria-label="Language"
     >
-      {opts.map((l) => (
+      {LOCALES.map((l) => (
         <button
           key={l}
           type="button"
           onClick={() => setLocale(l)}
           className={
-            "min-h-8 rounded-full px-3 transition-[background-color,color,transform] duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold " +
-            (locale === l ? "bg-navy text-crema" : "text-navy/60 hover:bg-navy/8 hover:text-navy")
+            "min-h-7 px-3 transition-[background-color,color] duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold " +
+            (locale === l ? "bg-navy text-crema" : "text-navy/60 hover:text-navy")
           }
           aria-pressed={locale === l}
         >

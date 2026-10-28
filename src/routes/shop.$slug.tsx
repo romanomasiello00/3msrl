@@ -13,10 +13,10 @@ export const Route = createFileRoute("/shop/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Unavailable — 3 M S.r.l." }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Unavailable, 3 M S.r.l." }, { name: "robots", content: "noindex" }] };
     }
     const p = loaderData.product;
-    const title = `3 M S.r.l. ${p.name} — ${p.ageing.en} · Tequila`;
+    const title = `3 M S.r.l. ${p.name}, ${p.ageing.en}, Tequila`;
     const description = p.intro.en;
     return {
       meta: [
@@ -83,7 +83,7 @@ function ProductPage() {
 
           <div className="fade-up" style={{ animationDelay: "120ms" }}>
             <p className="eyebrow mb-5">{product.subtitle[locale]}</p>
-            <h1 className="font-display text-5xl italic text-navy md:text-6xl">
+            <h1 className="font-script text-5xl text-navy md:text-6xl">
               <span className="font-brand">3 M S.r.l.</span> {product.name}
             </h1>
             <p className="mt-7 leading-relaxed text-navy/70">{product.intro[locale]}</p>
@@ -133,7 +133,7 @@ function ProductPage() {
                   />
                 </div>
                 <div>
-                  <h2 className="font-display text-2xl italic text-navy transition-colors group-hover:text-gold">
+                  <h2 className="font-script text-2xl text-navy transition-colors group-hover:text-gold">
                     {p.name}
                   </h2>
                   <p className="mt-2 text-[10px] uppercase tracking-[0.3em] text-navy/45">

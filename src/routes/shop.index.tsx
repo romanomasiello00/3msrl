@@ -8,17 +8,17 @@ import { ReserveDialog } from "@/components/ReserveDialog";
 export const Route = createFileRoute("/shop/")({
   head: () => ({
     meta: [
-      { title: "Shop — The 3 M S.r.l. Collection · Blanco, Reposado, Añejo" },
+      { title: "Shop, The 3 M S.r.l. Collection, Blanco, Reposado, Añejo" },
       {
         name: "description",
         content:
           "Discover the 3 M S.r.l. collection: Blanco, Reposado and Añejo. 100% blue agave, made in Mexico, rested for Puglia. Reserve your allocation.",
       },
-      { property: "og:title", content: "Shop — The 3 M S.r.l. Collection" },
+      { property: "og:title", content: "Shop, The 3 M S.r.l. Collection" },
       {
         property: "og:description",
         content:
-          "Three expressions of 3 M S.r.l. tequila — Blanco, Reposado and Añejo. Limited allocations, reserved on request.",
+          "Three expressions of 3 M S.r.l. tequila, Blanco, Reposado and Añejo. Limited allocations, reserved on request.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/shop" },
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/shop/")({
           "@type": "CollectionPage",
           name: "The 3 M S.r.l. Collection",
           description:
-            "Three expressions of 3 M S.r.l. tequila — Blanco, Reposado and Añejo. 100% blue agave, made in Mexico, rested for Puglia.",
+            "Three expressions of 3 M S.r.l. tequila, Blanco, Reposado and Añejo. 100% blue agave, made in Mexico, rested for Puglia.",
           mainEntity: {
             "@type": "ItemList",
             itemListElement: products.map((p, i) => ({
@@ -58,7 +58,7 @@ function ShopPage() {
       <div className="mx-auto max-w-7xl">
         <header className="fade-up mx-auto mb-20 max-w-2xl text-center">
           <p className="eyebrow mb-6">{t("shop.eyebrow")}</p>
-          <h1 className="mb-6 font-display text-5xl italic text-navy md:text-6xl">
+          <h1 className="mb-6 font-script text-5xl text-navy md:text-6xl">
             {t("shop.title")}
           </h1>
           <p className="leading-relaxed text-navy/70">{t("shop.intro")}</p>
@@ -120,7 +120,7 @@ function ProductCard({
       </Link>
 
       <div className="mt-7 flex flex-1 flex-col">
-        <h2 className="font-display text-3xl italic text-navy">{product.name}</h2>
+        <h2 className="font-script text-3xl text-navy">{product.name}</h2>
         <p className="mt-2 text-[10px] uppercase tracking-[0.3em] text-navy/45">
           {product.subtitle[locale]}
         </p>

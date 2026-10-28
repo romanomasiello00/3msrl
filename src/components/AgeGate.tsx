@@ -39,10 +39,10 @@ export function AgeGate() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(15,27,61,0.06)_100%)]" />
       <div className="relative w-full max-w-lg mx-4 text-center">
         <BrandMark className="mx-auto size-16 mb-8" />
-        <p className="eyebrow font-brand mb-6">3 M S.r.l. · Tequila · Puglia</p>
+        <p className="eyebrow font-brand mb-6">3 M S.r.l., Tequila, Puglia</p>
         <h2
           id="age-gate-title"
-          className="font-display text-4xl md:text-5xl font-medium text-navy mb-6 text-balance"
+          className="font-script text-4xl md:text-5xl text-navy mb-6 text-balance"
         >
           {status === "denied" ? t("age.rejected") : t("age.title")}
         </h2>

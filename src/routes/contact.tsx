@@ -6,13 +6,13 @@ import { useTranslation } from "@/lib/i18n";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — 3 M S.r.l." },
+      { title: "Contact, 3 M S.r.l." },
       {
         name: "description",
         content:
           "Write to 3 M S.r.l. for general enquiries, distribution, press or hospitality.",
       },
-      { property: "og:title", content: "Contact — 3 M S.r.l." },
+      { property: "og:title", content: "Contact, 3 M S.r.l." },
       {
         property: "og:description",
         content:
@@ -78,7 +78,7 @@ function ContactPage() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <p className="eyebrow mb-6">{t("contact.eyebrow")}</p>
-          <h1 className="font-display text-5xl md:text-6xl text-navy mb-6 italic">
+          <h1 className="font-script text-5xl md:text-6xl text-navy mb-6">
             {t("contact.title")}
           </h1>
           <p className="text-navy/70 max-w-xl mx-auto leading-relaxed">{t("contact.intro")}</p>
@@ -171,7 +171,7 @@ function ContactPage() {
 
             <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-6">
               <p className="text-[10px] uppercase tracking-[0.3em] text-navy/40">
-                Hecho en México · Imported to Puglia
+                Hecho en México, Imported to Puglia
               </p>
               <button
                 type="submit"

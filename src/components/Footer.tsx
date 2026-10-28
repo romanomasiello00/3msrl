@@ -33,11 +33,6 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/expression" className="hover:text-gold transition-colors">
-                    {t("nav.expression")}
-                  </Link>
-                </li>
-                <li>
                   <Link to="/tequila-1" className="hover:text-gold transition-colors">
                     {t("nav.tequila1")}
                   </Link>
@@ -76,7 +71,7 @@ export function Footer() {
           <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-navy/40">
             {t("footer.rights")}
           </span>
-          <div className="px-4 py-1.5 border border-navy/20 rounded-full text-[9px] font-semibold tracking-[0.3em] text-navy/70 uppercase">
+          <div className="ornate ornate-label px-5 py-2 text-center text-[11px] tracking-[0.25em]">
             {t("footer.responsible")}
           </div>
         </div>

@@ -4,10 +4,10 @@ import { useTranslation } from "@/lib/i18n";
 export const Route = createFileRoute("/tequila-1")({
   head: () => ({
     meta: [
-      { title: "Tequila 1 — 3 M S.r.l." },
+      { title: "Tequila 1, 3 M S.r.l." },
       { name: "description", content: "A new tequila brand from 3 M S.r.l., coming soon." },
       { name: "robots", content: "noindex" },
-      { property: "og:title", content: "Tequila 1 — 3 M S.r.l." },
+      { property: "og:title", content: "Tequila 1, 3 M S.r.l." },
       { property: "og:url", content: "/tequila-1" },
     ],
     links: [{ rel: "canonical", href: "/tequila-1" }],
@@ -21,11 +21,11 @@ function BrandPlaceholder() {
     <section className="pt-24 pb-32 px-6 text-center">
       <div className="max-w-2xl mx-auto">
         <p className="eyebrow font-brand mb-6">{t("brandPage.eyebrow")}</p>
-        <h1 className="font-display text-5xl md:text-6xl text-navy mb-6 italic">
+        <h1 className="font-script text-5xl md:text-6xl text-navy mb-6">
           {t("nav.tequila1")}
         </h1>
-        <div className="inline-block mb-8 py-2 px-4 border border-gold/40 rounded-full">
-          <span className="text-[10px] font-medium uppercase tracking-[0.35em] text-gold-ink">
+        <div className="ornate ornate-stars inline-block mb-8 max-w-full px-6 py-3">
+          <span className="ornate-label text-[13px] tracking-[0.2em] md:tracking-[0.3em]">
             {t("shop.comingSoon")}
           </span>
         </div>

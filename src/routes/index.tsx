@@ -7,13 +7,13 @@ import { BrandLogo } from "@/components/BrandLogo";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "3 M S.r.l. — A House of Tequila Brands" },
+      { title: "3 M S.r.l., A House of Tequila Brands" },
       {
         name: "description",
         content:
           "Where the golden soul of Mexico meets the timeless light of Puglia. 3 M S.r.l. is a house of tequila brands, crafted with care and rooted in place.",
       },
-      { property: "og:title", content: "3 M S.r.l. — A House of Tequila Brands" },
+      { property: "og:title", content: "3 M S.r.l., A House of Tequila Brands" },
       {
         property: "og:description",
         content:
@@ -50,13 +50,13 @@ function Home() {
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
           <BrandLogo className="w-80 md:w-[30rem] lg:w-[38rem] h-auto mb-10 fade-in" />
 
-          <div className="mb-8 py-2 px-4 border border-gold/40 rounded-full fade-in">
-            <span className="text-[10px] font-medium uppercase tracking-[0.35em] text-gold-ink">
+          <div className="ornate ornate-stars mb-8 max-w-full px-6 py-3 text-center fade-in">
+            <span className="ornate-label text-[13px] tracking-[0.2em] md:tracking-[0.3em]">
               {t("badge.origin")}
             </span>
           </div>
 
-          <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-medium leading-[1.02] mb-10 text-balance max-w-[22ch] text-navy title-reveal">
+          <h1 className="font-script text-5xl md:text-6xl lg:text-7xl mb-10 text-balance max-w-[22ch] text-navy title-reveal">
             {t("hero.title")}
           </h1>
 
@@ -87,7 +87,7 @@ function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-center">
           <div className="lg:col-span-5">
             <p className="eyebrow mb-6">{t("home.story.eyebrow")}</p>
-            <h2 className="font-display text-4xl md:text-5xl font-medium leading-tight text-navy mb-8">
+            <h2 className="font-script text-4xl md:text-5xl text-navy mb-8">
               {t("home.story.title")}
             </h2>
             <p className="text-navy/70 leading-relaxed mb-10 max-w-[52ch]">
@@ -157,7 +157,7 @@ function Home() {
             <p className="text-[10px] uppercase tracking-[0.35em] text-gold mb-6">
               {t("home.brands.eyebrow")}
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-medium leading-tight mb-6 text-balance">
+            <h2 className="font-script text-4xl md:text-5xl mb-6 text-balance">
               {t("home.brands.title")}
             </h2>
             <p className="text-soft-white/60 leading-relaxed max-w-[44ch] mx-auto">
