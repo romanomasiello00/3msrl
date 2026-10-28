@@ -96,15 +96,32 @@ function Home() {
 
             <div className="grid grid-cols-3 gap-4 mb-10 max-w-md">
               {[
-                { m: "LM", r: t("story.lm.role") },
-                { m: "RM", r: t("story.rm.role") },
-                { m: "GM", r: t("story.gm.role") },
+                {
+                  name: "Luigi Marinaro",
+                  image: "/email/luigi-ritratto.png",
+                  role: t("story.lm.role"),
+                },
+                {
+                  name: "Romano Masiello",
+                  image: "/email/romano-ritratto.png",
+                  role: t("story.rm.role"),
+                },
+                {
+                  name: "Luigi Pio Marinaro",
+                  image: "/email/luigi-pio-marinaro-ritratto.png",
+                  role: t("story.gm.role"),
+                },
               ].map((f) => (
-                <div key={f.m} className="text-center">
-                  <div className="mx-auto mb-3 size-14 rounded-full border border-navy/15 grid place-items-center font-display text-xl text-navy transition-colors hover:border-gold hover:text-gold">
-                    {f.m}
+                <div key={f.name} className="text-center">
+                  <div className="mx-auto mb-3 size-14 overflow-hidden rounded-full border border-navy/15 bg-white transition-colors hover:border-gold">
+                    <img
+                      src={f.image}
+                      alt={`Portrait of ${f.name}`}
+                      className="size-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
-                  <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-navy">{f.r}</p>
+                  <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-navy">{f.role}</p>
                 </div>
               ))}
             </div>
