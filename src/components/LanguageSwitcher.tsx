@@ -5,7 +5,7 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
   return (
     <div
       className={
-        "ornate ornate-label inline-flex items-center p-1.5 text-[12px] tracking-[0.14em] " +
+        "ornate ornate-sm ornate-label inline-flex items-center p-1.5 text-[12px] tracking-[0.14em] " +
         className
       }
       role="group"

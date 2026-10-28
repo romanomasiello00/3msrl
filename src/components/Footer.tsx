@@ -71,7 +71,7 @@ export function Footer() {
           <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-navy/40">
             {t("footer.rights")}
           </span>
-          <div className="ornate ornate-label px-5 py-2 text-center text-[11px] tracking-[0.25em]">
+          <div className="ornate ornate-sm ornate-label px-5 py-2 text-center text-[11px] tracking-[0.25em]">
             {t("footer.responsible")}
           </div>
         </div>

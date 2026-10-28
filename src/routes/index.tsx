@@ -50,7 +50,7 @@ function Home() {
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
           <BrandLogo className="w-80 md:w-[30rem] lg:w-[38rem] h-auto mb-10 fade-in" />
 
-          <div className="ornate ornate-stars mb-8 max-w-full px-6 py-3 text-center fade-in">
+          <div className="ornate ornate-stars mb-8 max-w-full px-6 py-4 text-center fade-in">
             <span className="ornate-label text-[13px] tracking-[0.2em] md:tracking-[0.3em]">
               {t("badge.origin")}
             </span>

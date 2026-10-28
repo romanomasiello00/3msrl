@@ -56,14 +56,14 @@ function StoryPage() {
       image: "/email/luigi-ritratto.png",
       role: t("story.lm.role"),
       bio: t("story.lm.bio"),
-      email: "luigi@spititsproject.it",
+      email: "luigi@spiritsproject.it",
     },
     {
       name: "Romano Masiello",
       image: "/email/romano-ritratto.png",
       role: t("story.rm.role"),
       bio: t("story.rm.bio"),
-      email: "romano.masiello@spititsproject.it",
+      email: "romano.masiello@spiritsproject.it",
     },
     {
       name: "Luigi Pio Marinaro",
@@ -105,7 +105,7 @@ function StoryPage() {
         </div>
 
         <div className="mt-16 flex justify-center">
-          <div className="ornate ornate-stars max-w-full px-8 py-3 text-center">
+          <div className="ornate ornate-stars max-w-full px-8 py-4 text-center text-balance">
             <span className="ornate-label text-[13px] tracking-[0.18em] md:tracking-[0.3em]">
               Hecho en México, Imported to Puglia
             </span>

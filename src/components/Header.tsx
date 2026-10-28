@@ -5,7 +5,7 @@ import { BrandLogo } from "./BrandLogo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const linkCls =
-  "ornate ornate-interactive ornate-label inline-flex min-h-10 items-center px-4 text-[12px] tracking-[0.16em] text-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold";
+  "ornate ornate-sm ornate-interactive ornate-label inline-flex min-h-10 items-center px-4 text-[12px] tracking-[0.16em] text-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold";
 
 export function Header() {
   const { t } = useTranslation();

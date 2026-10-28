@@ -185,23 +185,29 @@
   }
 }
 
-/* Ornamental cartouche: double gold rule, scooped corners, sunburst finials.
-   The frame is a 9-slice SVG border-image, so it stretches to any badge or button
-   without changing layout (border stays 1px; the image paints over the padding). */
+/* Ornamental cartouche: double gold rule with ogee shoulders (vintage spirits label).
+   Frame is a 9-slice SVG border-image, so it stretches to any badge or button without
+   changing layout (border stays 1px; the image paints over the padding).
+   .ornate-stars adds the two inner rules broken by sunburst finials (badges only). */
 @layer components {
   :root {
-    --ornate-gold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' fill='none' stroke='%23c9a84c'%3E%3Cpath d='M4 .5H32A3.5 3.5 0 0 0 35.5 4V32A3.5 3.5 0 0 0 32 35.5H4A3.5 3.5 0 0 0 .5 32V4A3.5 3.5 0 0 0 4 .5Z'/%3E%3Cpath d='M5.5 5.5H30.5V30.5H5.5Z' stroke-width='.75' opacity='.75'/%3E%3C/svg%3E");
-    --ornate-navy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' fill='none' stroke='%230f1b3d'%3E%3Cpath d='M4 .5H32A3.5 3.5 0 0 0 35.5 4V32A3.5 3.5 0 0 0 32 35.5H4A3.5 3.5 0 0 0 .5 32V4A3.5 3.5 0 0 0 4 .5Z'/%3E%3Cpath d='M5.5 5.5H30.5V30.5H5.5Z' stroke-width='.75' opacity='.75'/%3E%3C/svg%3E");
+    --ornate-gold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64' fill='none' stroke='%23c9a84c' stroke-width='1'%3E%3Cdefs%3E%3Cpath id='k' d='M26 .5H15C9.5 .5 6.5 3.5 6.5 8.5C6.5 12.5 .5 11.5 .5 17.5V26M29 3.5H18C12.5 3.5 9.5 6.5 9.5 11.5C9.5 15.5 3.5 14.5 3.5 20.5V29'/%3E%3C/defs%3E%3Cuse href='%23k'/%3E%3Cuse href='%23k' transform='matrix(-1 0 0 1 64 0)'/%3E%3Cuse href='%23k' transform='matrix(1 0 0 -1 0 64)'/%3E%3Cuse href='%23k' transform='matrix(-1 0 0 -1 64 64)'/%3E%3Cpath d='M26 .5H38M26 63.5H38M26 63.5M3.5 29V35M.5 26V38M63.5 26V38M60.5 29V35M29 3.5H35M29 60.5H35'/%3E%3C/svg%3E");
+    --ornate-navy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64' fill='none' stroke='%230f1b3d' stroke-width='1'%3E%3Cdefs%3E%3Cpath id='k' d='M26 .5H15C9.5 .5 6.5 3.5 6.5 8.5C6.5 12.5 .5 11.5 .5 17.5V26M29 3.5H18C12.5 3.5 9.5 6.5 9.5 11.5C9.5 15.5 3.5 14.5 3.5 20.5V29'/%3E%3C/defs%3E%3Cuse href='%23k'/%3E%3Cuse href='%23k' transform='matrix(-1 0 0 1 64 0)'/%3E%3Cuse href='%23k' transform='matrix(1 0 0 -1 0 64)'/%3E%3Cuse href='%23k' transform='matrix(-1 0 0 -1 64 64)'/%3E%3Cpath d='M26 .5H38M26 63.5H38M26 63.5M3.5 29V35M.5 26V38M63.5 26V38M60.5 29V35M29 3.5H35M29 60.5H35'/%3E%3C/svg%3E");
     --ornate-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-5.5 -5.5 11 11'%3E%3Ccircle r='4' fill='%23f5efe4'/%3E%3Cpolygon fill='%23c9a84c' points='0.00,-5.00 0.46,-1.11 2.40,-2.40 1.11,-0.46 5.00,0.00 1.11,0.46 2.40,2.40 0.46,1.11 0.00,5.00 -0.46,1.11 -2.40,2.40 -1.11,0.46 -5.00,0.00 -1.11,-0.46 -2.40,-2.40 -0.46,-1.11'/%3E%3C/svg%3E");
   }
   .ornate {
     border: 1px solid transparent;
-    border-image: var(--ornate-gold) 12 / 12px stretch;
+    border-image: var(--ornate-gold) 24 / 20px stretch;
+  }
+  .ornate-sm {
+    border-image-width: 12px;
   }
   .ornate-stars {
     background:
-      var(--ornate-star) 50% 0 / 11px 11px no-repeat border-box,
-      var(--ornate-star) 50% 100% / 11px 11px no-repeat border-box;
+      var(--ornate-star) 50% 4px / 11px 11px no-repeat border-box,
+      var(--ornate-star) 50% calc(100% - 4px) / 11px 11px no-repeat border-box,
+      linear-gradient(var(--gold), var(--gold)) 22px 9px / calc(100% - 44px) 1px no-repeat border-box,
+      linear-gradient(var(--gold), var(--gold)) 22px calc(100% - 9px) / calc(100% - 44px) 1px no-repeat border-box;
   }
   .ornate-interactive:hover,
   .ornate-interactive:focus-visible {
@@ -212,6 +218,6 @@
     font-variant-numeric: lining-nums;
     font-weight: 600;
     text-transform: uppercase;
-    color: var(--gold-ink);
+    color: var(--navy);
   }
 }
