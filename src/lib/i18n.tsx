@@ -76,16 +76,21 @@ const en: Dict = {
   "story.eyebrow": "The Story",
   "story.title": "Three friends, two lands",
   "story.p1":
-    "Luigi Marinaro, Romano Masiello and Gigi Marinaro have always shared the same land: Puglia. And the same craft, passed down through generations — the making of wine, food and spirits, which here is culture before it is work.",
+    "Luigi Marinaro, Romano Masiello and Luigi Pio Marinaro have always shared the same land: Puglia. And the same craft, passed down through generations — the making of wine, food and spirits, which here is culture before it is work.",
   "story.p2":
     "From those roots grew a larger passion: the world of spirits, and tequila above all. Those who know fermentation, time and the patience of the land recognise in agave the same language as olive trees and vines.",
   "story.p3":
     "So, in recent years, they set out on a new adventure: to create a tequila as faithful as possible to Mexican tradition, yet with an eye turned to Puglia. 3 M S.r.l. is made in Mexico, in the heart of the blue agave. It is in Puglia that it finds its Mediterranean home.",
   "story.founders": "The founders",
-  "story.bio.soon": "Biography coming soon.",
   "story.lm.role": "CO-FOUNDER",
   "story.rm.role": "CO-FOUNDER",
   "story.gm.role": "CO-FOUNDER",
+  "story.lm.bio":
+    "Entrepreneur with decades of experience in operational and administrative business management. Co-owner of SIMED S.r.l. and F.lli Marinaro, both based in Cerignola. Luigi Marinaro is the company's sole director and is responsible for administration and finance.",
+  "story.rm.bio":
+    "After returning to Cerignola following five years in the Netherlands as an Investment Analyst and Data Analyst at various financial institutions, Romano Masiello oversees the project's operations and financial planning.",
+  "story.gm.bio":
+    "Entrepreneur with decades of experience in operational and commercial business management. Co-owner of SIMED S.r.l. and F.lli Marinaro, both based in Cerignola. Luigi Pio Marinaro oversees the commercial and strategic side of the business.",
 
   "expression.eyebrow": "The Expression",
   "expression.title": "Tequila Reposado",
@@ -202,16 +207,21 @@ const it: Dict = {
   "story.eyebrow": "La Storia",
   "story.title": "Tre amici, due terre",
   "story.p1":
-    "Luigi Marinaro, Romano Masiello e Gigi Marinaro condividono da sempre la stessa terra: la Puglia. E lo stesso mestiere, tramandato di generazione in generazione — la produzione di vino, cibo e distillati, che qui è cultura prima ancora che lavoro.",
+    "Luigi Marinaro, Romano Masiello e Luigi Pio Marinaro condividono da sempre la stessa terra: la Puglia. E lo stesso mestiere, tramandato di generazione in generazione — la produzione di vino, cibo e distillati, che qui è cultura prima ancora che lavoro.",
   "story.p2":
     "Da queste radici è nata una passione più grande: il mondo dei distillati, e la tequila su tutti. Chi conosce la fermentazione, il tempo e la pazienza della terra riconosce nell'agave la stessa lingua degli ulivi e delle vigne.",
   "story.p3":
     "Così, negli ultimi anni, hanno intrapreso una nuova avventura: creare una tequila il più possibile fedele alla tradizione messicana, ma con uno sguardo rivolto alla Puglia. 3 M S.r.l. è prodotta in Messico, nel cuore dell'agave blu. È in Puglia che trova la sua casa mediterranea.",
   "story.founders": "I fondatori",
-  "story.bio.soon": "Biografia in arrivo.",
   "story.lm.role": "CO-FOUNDER",
   "story.rm.role": "CO-FOUNDER",
   "story.gm.role": "CO-FOUNDER",
+  "story.lm.bio":
+    "Imprenditore con esperienza decennale nella gestione operativa e amministrativa aziendale. Co-Titolare della SIMED S.r.l. e della F.lli Marinaro, situate a Cerignola. Luigi Marinaro è l’Amministratore unico della società, nonché responsabile della parte amministrativa e finanziaria.",
+  "story.rm.bio":
+    "Ri-trasferitosi a Cerignola dopo un’esperienza quinquennale in Olanda come Analista d’Investimenti e Data Analyst presso svarie istituzioni finanziarie, Romano Masiello si occupa della gestione operativa e planning finanziario del progetto.",
+  "story.gm.bio":
+    "Imprenditore con esperienza pluri-decennale nella gestione aziendale operativa e commerciale. Co-Titolare della SIMED S.r.l. e della F.lli Marinaro, situate a Cerignola. Luigi Pio Marinaro si occupa della componente commerciale e strategica.",
 
   "expression.eyebrow": "L'espressione",
   "expression.title": "Tequila Reposado",

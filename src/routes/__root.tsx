@@ -122,7 +122,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           founder: [
             { "@type": "Person", name: "Luigi Marinaro" },
             { "@type": "Person", name: "Romano Masiello" },
-            { "@type": "Person", name: "Gigi Marinaro" },
+            { "@type": "Person", name: "Luigi Pio Marinaro" },
           ],
           areaServed: ["IT", "MX"],
         }),

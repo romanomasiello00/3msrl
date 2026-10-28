@@ -10,7 +10,7 @@ export const Route = createFileRoute("/story")({
       {
         name: "description",
         content:
-          "Three friends, two lands. Luigi Marinaro, Romano Masiello and Gigi Marinaro on how 3 M S.r.l. was born between Puglia and Mexico.",
+          "Three friends, two lands. Luigi Marinaro, Romano Masiello and Luigi Pio Marinaro on how 3 M S.r.l. was born between Puglia and Mexico.",
       },
       { property: "og:title", content: "The Story — 3 M S.r.l." },
       {
@@ -37,7 +37,7 @@ export const Route = createFileRoute("/story")({
             founder: [
               { "@type": "Person", name: "Luigi Marinaro" },
               { "@type": "Person", name: "Romano Masiello" },
-              { "@type": "Person", name: "Gigi Marinaro" },
+              { "@type": "Person", name: "Luigi Pio Marinaro" },
             ],
           },
         }),
@@ -51,9 +51,24 @@ function StoryPage() {
   const { t } = useTranslation();
 
   const founders = [
-    { m: "LM", name: "Luigi Marinaro", role: t("story.lm.role") },
-    { m: "RM", name: "Romano Masiello", role: t("story.rm.role") },
-    { m: "GM", name: "Gigi Marinaro", role: t("story.gm.role") },
+    {
+      name: "Luigi Marinaro",
+      image: "/email/luigi-ritratto.png",
+      role: t("story.lm.role"),
+      bio: t("story.lm.bio"),
+    },
+    {
+      name: "Romano Masiello",
+      image: "/email/romano-ritratto.png",
+      role: t("story.rm.role"),
+      bio: t("story.rm.bio"),
+    },
+    {
+      name: "Luigi Pio Marinaro",
+      image: "/email/luigi-pio-marinaro-ritratto.png",
+      role: t("story.gm.role"),
+      bio: t("story.gm.bio"),
+    },
   ];
 
   return (
@@ -106,15 +121,20 @@ function StoryPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
             {founders.map((f) => (
               <div
-                key={f.m}
+                key={f.name}
                 className="group flex flex-col items-center text-center p-8 border border-navy/10 rounded-md hover:border-gold/60 transition-colors bg-soft-white/50"
               >
-                <div className="size-28 rounded-full border border-navy/15 grid place-items-center font-display text-3xl text-navy mb-6 group-hover:border-gold group-hover:text-gold transition-colors">
-                  {f.m}
+                <div className="size-28 shrink-0 overflow-hidden rounded-full border border-navy/15 bg-white mb-6 group-hover:border-gold transition-colors">
+                  <img
+                    src={f.image}
+                    alt={`Portrait of ${f.name}`}
+                    className="size-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
                 <p className="eyebrow mb-3">{f.role}</p>
                 <h3 className="font-display text-2xl text-navy mb-3">{f.name}</h3>
-                <p className="text-sm text-navy/60 italic">{t("story.bio.soon")}</p>
+                <p className="text-sm leading-relaxed text-navy/70">{f.bio}</p>
               </div>
             ))}
           </div>
