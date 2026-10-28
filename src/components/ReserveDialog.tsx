@@ -164,7 +164,7 @@ export function ReserveDialog({ open, onClose, product }: Props) {
 
               <button
                 type="submit"
-                className="group inline-flex w-full items-center justify-center gap-4 bg-navy px-8 py-4 text-[11px] font-medium uppercase tracking-[0.3em] text-crema transition-colors hover:bg-gold hover:text-navy"
+                className="group ornate ornate-sm ornate-solid ornate-interactive ornate-label inline-flex w-full items-center justify-center gap-4 px-8 py-4 text-[13px] tracking-[0.25em] text-crema hover:text-navy"
               >
                 {t("shop.form.submit")}
                 <span className="transition-transform group-hover:translate-x-1">→</span>

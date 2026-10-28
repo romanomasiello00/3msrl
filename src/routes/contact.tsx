@@ -176,7 +176,7 @@ function ContactPage() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="group inline-flex items-center gap-4 px-8 py-4 bg-navy text-crema text-[11px] font-medium uppercase tracking-[0.3em] transition-colors hover:bg-gold hover:text-navy disabled:opacity-60"
+                className="group ornate ornate-sm ornate-solid ornate-interactive ornate-label inline-flex items-center gap-4 px-8 py-4 text-crema text-[13px] tracking-[0.25em] hover:text-navy disabled:opacity-60"
               >
                 {status === "sending" ? t("contact.sending") : t("contact.submit")}
                 <span className="transition-transform group-hover:translate-x-1">→</span>

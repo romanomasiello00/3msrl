@@ -179,9 +179,54 @@
   transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Hero quote: each line wipes in left→right, then lifts out in reverse order.
+   Phase is driven by data-phase from QuoteReveal (routes/index.tsx). */
+.quote-reveal {
+  line-height: 1.47;
+  letter-spacing: -0.017em;
+}
+.quote-reveal span {
+  display: block;
+  white-space: nowrap;
+  opacity: 0;
+  clip-path: inset(0 100% 0 0);
+  transform: translateY(12px);
+  filter: blur(5px);
+}
+.quote-reveal[data-phase="entering"] span {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+  transform: translateY(0);
+  filter: blur(0);
+  transition:
+    opacity 3.3s ease,
+    clip-path 3.3s cubic-bezier(0.25, 0.1, 0.25, 1),
+    transform 3.3s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 3.3s ease;
+  transition-delay: calc(var(--i) * 0.9s);
+}
+.quote-reveal[data-phase="exiting"] span {
+  opacity: 0;
+  clip-path: inset(0 0 0 0);
+  transform: translateY(-18px);
+  filter: blur(7px);
+  transition:
+    opacity 3s ease-in-out,
+    transform 3s ease-in-out,
+    filter 3s ease-in-out;
+  transition-delay: calc((var(--n) - 1 - var(--i)) * 0.6s);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .title-reveal {
     animation: none;
+  }
+  .quote-reveal span {
+    opacity: 1;
+    clip-path: none;
+    transform: none;
+    filter: none;
+    transition: none !important;
   }
 }
 
@@ -208,6 +253,15 @@
       var(--ornate-star) 50% calc(100% - 4px) / 11px 11px no-repeat border-box,
       linear-gradient(var(--gold), var(--gold)) 22px 9px / calc(100% - 44px) 1px no-repeat border-box,
       linear-gradient(var(--gold), var(--gold)) 22px calc(100% - 9px) / calc(100% - 44px) 1px no-repeat border-box;
+  }
+  /* solid CTA: navy plate inset inside the double rule; gold plate on hover */
+  .ornate-solid {
+    --fill: var(--navy);
+    background: linear-gradient(var(--fill), var(--fill)) 5px 5px / calc(100% - 10px) calc(100% - 10px) no-repeat border-box;
+  }
+  .ornate-solid:hover:not(:disabled),
+  .ornate-solid:focus-visible {
+    --fill: var(--gold);
   }
   .ornate-interactive:hover,
   .ornate-interactive:focus-visible {

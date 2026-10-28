@@ -57,7 +57,7 @@ export function AgeGate() {
               <button
                 type="button"
                 onClick={grant}
-                className="group inline-flex items-center gap-3 px-6 py-3 bg-navy text-crema text-[11px] font-medium uppercase tracking-[0.25em] transition-colors hover:bg-gold hover:text-navy"
+                className="group ornate ornate-sm ornate-solid ornate-interactive ornate-label inline-flex items-center gap-3 px-6 py-3 text-crema text-[13px] tracking-[0.2em] hover:text-navy"
               >
                 {t("age.yes")}
                 <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -65,7 +65,7 @@ export function AgeGate() {
               <button
                 type="button"
                 onClick={() => setStatus("denied")}
-                className="px-6 py-3 border border-navy/20 text-navy text-[11px] font-medium uppercase tracking-[0.25em] transition-colors hover:border-navy hover:bg-navy/5"
+                className="ornate ornate-sm ornate-interactive ornate-label px-6 py-3 text-[13px] tracking-[0.2em]"
               >
                 {t("age.no")}
               </button>

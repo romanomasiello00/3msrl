@@ -104,7 +104,7 @@ function ProductPage() {
             <button
               type="button"
               onClick={() => setOpen(true)}
-              className="group mt-12 inline-flex items-center gap-4 bg-navy px-9 py-4 text-[11px] font-medium uppercase tracking-[0.3em] text-crema transition-colors hover:bg-gold hover:text-navy"
+              className="group ornate ornate-sm ornate-solid ornate-interactive ornate-label mt-12 inline-flex items-center gap-4 px-9 py-4 text-[13px] tracking-[0.25em] text-crema hover:text-navy"
             >
               {available ? t("shop.reserve") : t("shop.notify")}
               <span className="transition-transform group-hover:translate-x-1">→</span>

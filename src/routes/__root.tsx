@@ -53,13 +53,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="px-6 py-2.5 bg-navy text-crema text-[11px] uppercase tracking-[0.25em] hover:bg-gold hover:text-navy transition-colors"
+            className="ornate ornate-sm ornate-solid ornate-interactive ornate-label px-6 py-2.5 text-crema text-[13px] tracking-[0.2em] hover:text-navy"
           >
             Try again
           </button>
           <a
             href="/"
-            className="px-6 py-2.5 border border-navy/20 text-[11px] uppercase tracking-[0.25em] hover:border-navy transition-colors"
+            className="ornate ornate-sm ornate-interactive ornate-label px-6 py-2.5 text-[13px] tracking-[0.2em]"
           >
             Home
           </a>

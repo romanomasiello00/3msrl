@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "@/lib/i18n";
 import heroLandscape from "@/assets/hero-landscape.jpg";
@@ -40,6 +41,73 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
+const QUOTE_EXIT_AT_MS = 9500;
+const QUOTE_LOOP_MS = 15000;
+// idle has no transition, so lines snap back hidden before the next wipe
+const QUOTE_RESET_MS = 50;
+
+type QuotePhase = "idle" | "entering" | "exiting";
+
+/* Line-by-line handwritten wipe; loops (enter, hold, exit) while on screen. */
+function QuoteReveal({ text }: { text: string }) {
+  const ref = useRef<HTMLHeadingElement>(null);
+  const [phase, setPhase] = useState<QuotePhase>("idle");
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setPhase("entering");
+      return;
+    }
+
+    let timers: number[] = [];
+    const clear = () => {
+      timers.forEach(clearTimeout);
+      timers = [];
+    };
+    const play = () => {
+      clear();
+      setPhase("idle");
+      timers.push(window.setTimeout(() => setPhase("entering"), QUOTE_RESET_MS));
+      timers.push(window.setTimeout(() => setPhase("exiting"), QUOTE_EXIT_AT_MS));
+      timers.push(window.setTimeout(play, QUOTE_LOOP_MS));
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) play();
+        else {
+          clear();
+          setPhase("idle");
+        }
+      },
+      { threshold: 0.3 },
+    );
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+      clear();
+    };
+  }, []);
+
+  const lines = text.split("\n");
+  return (
+    <h1
+      ref={ref}
+      aria-label={lines.join(" ")}
+      data-phase={phase}
+      className="quote-reveal font-script text-[clamp(1.5rem,6vw,4.5rem)] mb-10 text-navy"
+    >
+      {lines.map((line, i) => (
+        <span key={line} aria-hidden style={{ "--i": i, "--n": lines.length } as CSSProperties}>
+          {line}
+        </span>
+      ))}
+    </h1>
+  );
+}
+
 function Home() {
   const { t } = useTranslation();
 
@@ -56,9 +124,7 @@ function Home() {
             </span>
           </div>
 
-          <h1 className="font-script text-5xl md:text-6xl lg:text-7xl mb-10 text-balance max-w-[22ch] text-navy title-reveal">
-            {t("hero.title")}
-          </h1>
+          <QuoteReveal text={t("hero.title")} />
 
           <p className="max-w-[46ch] text-lg text-pretty leading-relaxed text-navy/75 mb-16 fade-up">
             {t("hero.subtitle")}

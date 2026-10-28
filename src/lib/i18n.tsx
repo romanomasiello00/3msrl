@@ -59,7 +59,7 @@ const en: Dict = {
   "shop.form.note": "No payment, Allocation request only, 18+",
 
   "badge.origin": "A house of tequila, born in Puglia",
-  "hero.title": "Where the golden soul of Mexico meets the timeless light of Puglia.",
+  "hero.title": "Where the golden soul\nof Mexico meets\nthe timeless light\nof Puglia.",
   "hero.subtitle":
     "3 M S.r.l. is born where two sun-blessed lands meet. A house of tequila brands, crafted with precision and rooted in place.",
 
@@ -205,7 +205,7 @@ const it: Dict = {
   "shop.form.note": "Nessun pagamento, Solo richiesta di allocazione, 18+",
 
   "badge.origin": "Una casa di tequila, nata in Puglia",
-  "hero.title": "Dove l'anima dorata del Messico incontra la luce eterna della Puglia.",
+  "hero.title": "Dove l'anima\ndorata del Messico\nincontra la luce\neterna della Puglia.",
   "hero.subtitle":
     "3 M S.r.l. nasce dove due terre baciate dal sole si incontrano. Una casa di marchi di tequila, fatta con precisione e radicata nel luogo.",
 
@@ -352,7 +352,7 @@ const es: Dict = {
   "shop.form.note": "Sin pago, solo solicitud de asignación, +18",
 
   "badge.origin": "Una casa de tequila, nacida en Puglia",
-  "hero.title": "Donde el alma dorada de México se encuentra con la luz eterna de Puglia.",
+  "hero.title": "Donde el alma dorada\nde México se encuentra\ncon la luz eterna\nde Puglia.",
   "hero.subtitle":
     "3 M S.r.l. nace donde se encuentran dos tierras bendecidas por el sol. Una casa de marcas de tequila, elaborada con precisión y arraigada en el lugar.",
 
