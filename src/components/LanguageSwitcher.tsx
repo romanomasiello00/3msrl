@@ -40,7 +40,7 @@ export function LanguageSwitcher({ className = "", expanded = false }: Props) {
 
   // ponytail: desktop wrapper has a fixed box so the pill can grow over the page
   // instead of pushing the header taller; 124px fits the longest native name.
-  const wrapCls = expanded ? "relative" : "relative h-[38px] w-[124px]";
+  const wrapCls = expanded ? "relative" : "relative h-[38px] w-[132px]";
   const pillCls =
     "lang-pill " +
     (expanded ? "relative w-full" : "absolute top-0 right-0 w-full") +

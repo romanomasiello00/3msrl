@@ -119,7 +119,7 @@ function Home() {
           <BrandLogo className="w-80 md:w-[30rem] lg:w-[38rem] h-auto mb-10 fade-in" />
 
           <div className="ornate ornate-stars mb-8 max-w-full px-6 py-4 text-center fade-in">
-            <span className="ornate-label text-[13px] tracking-[0.2em] md:tracking-[0.3em]">
+            <span className="badge-label md:text-[18px]">
               {t("badge.origin")}
             </span>
           </div>

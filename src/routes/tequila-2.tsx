@@ -25,9 +25,7 @@ function BrandPlaceholder() {
           {t("nav.tequila2")}
         </h1>
         <div className="ornate ornate-stars inline-block mb-8 max-w-full px-6 py-4">
-          <span className="ornate-label text-[13px] tracking-[0.2em] md:tracking-[0.3em]">
-            {t("shop.comingSoon")}
-          </span>
+          <span className="badge-label">{t("shop.comingSoon")}</span>
         </div>
         <p className="text-navy/70 leading-relaxed">{t("brandPage.body")}</p>
       </div>
