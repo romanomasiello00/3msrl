@@ -43,10 +43,12 @@
   --font-sans: "Inter", system-ui, sans-serif;
   --font-script: "Nothing You Could Do", "Bradley Hand", cursive;
   --font-brand: "Noteworthy Bold", "Noteworthy", "Bradley Hand", cursive;
+  --font-nav: "Italianno", "Nothing You Could Do", "Bradley Hand", cursive;
 }
 
 :root {
   --radius: 0.5rem;
+  --ease-brand: cubic-bezier(0.22, 1, 0.36, 1);
 
   /* 3 M S.r.l. palette */
   --crema: #f5efe4;
@@ -221,6 +223,18 @@
   .title-reveal {
     animation: none;
   }
+  .nav-pill,
+  .nav-pill::before,
+  .nav-pill::after,
+  .nav-pill-star,
+  .nav-pill-label::after,
+  .lang-pill,
+  .lang-pill-trigger,
+  .lang-pill-item,
+  .lang-pill-chevron,
+  .lang-pill-more {
+    transition: none;
+  }
   .quote-reveal span {
     opacity: 1;
     clip-path: none;
@@ -273,5 +287,187 @@
     font-weight: 600;
     text-transform: uppercase;
     color: var(--navy);
+  }
+
+  /* Header nav capsule: Italianno label in a sand pill. Hover pours a sand-then-navy
+     liquid up from the bottom, spins in a gold star (the pill widens to make room) and
+     draws a double gold rule under the label. The active route keeps star and rule with
+     a gold border and no fill, so it reads differently from hover. */
+  .nav-pill {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 6px 20px;
+    border: 1px solid var(--sand);
+    border-radius: 999px;
+    font-family: var(--font-nav);
+    font-size: 23px;
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+    color: var(--navy);
+    white-space: nowrap;
+    transition:
+      color 0.45s,
+      border-color 0.45s,
+      padding 0.5s var(--ease-brand);
+  }
+  .nav-pill::before,
+  .nav-pill::after {
+    content: "";
+    position: absolute;
+    left: -12%;
+    right: -12%;
+    bottom: -4px;
+    height: 140%;
+    border-radius: 48% 48% 0 0 / 42% 42% 0 0;
+    z-index: -1;
+    transition: transform 0.6s var(--ease-brand);
+  }
+  .nav-pill::before {
+    background: var(--sand);
+    transform: translateY(104%) rotate(-3deg);
+  }
+  .nav-pill::after {
+    background: var(--navy);
+    transform: translateY(104%) rotate(2deg);
+    transition-delay: 70ms;
+  }
+  .nav-pill-star {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    font-family: var(--font-sans);
+    font-size: 8px;
+    line-height: 1;
+    color: var(--gold);
+    opacity: 0;
+    transform: translateY(-50%) scale(0.3) rotate(-120deg);
+    transition:
+      transform 0.55s var(--ease-brand),
+      opacity 0.4s;
+  }
+  .nav-pill-label {
+    position: relative;
+    display: inline-block;
+  }
+  .nav-pill-label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 3px;
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.6s var(--ease-brand) 80ms;
+  }
+  .nav-pill:hover {
+    color: var(--crema);
+    border-color: var(--navy);
+    padding-left: 28px;
+  }
+  .nav-pill:hover::before,
+  .nav-pill:hover::after {
+    transform: translateY(0) rotate(0);
+  }
+  .nav-pill:hover .nav-pill-star,
+  .nav-pill.is-active .nav-pill-star {
+    opacity: 1;
+    transform: translateY(-50%) scale(1) rotate(0);
+  }
+  .nav-pill:hover .nav-pill-label::after,
+  .nav-pill.is-active .nav-pill-label::after {
+    transform: scaleX(1);
+  }
+  .nav-pill.is-active {
+    color: var(--navy);
+    border-color: var(--gold);
+    padding-left: 28px;
+  }
+  .nav-pill.is-active::before,
+  .nav-pill.is-active::after {
+    display: none;
+  }
+  .nav-pill:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  /* Language capsule: same pill, showing the current language's native name. Open, it
+     grows downwards (grid rows 0fr -> 1fr) to reveal the other languages. */
+  .lang-pill {
+    display: block;
+    overflow: hidden;
+    border: 1px solid var(--sand);
+    border-radius: 19px;
+    background: var(--crema);
+    font-family: var(--font-nav);
+    font-size: 23px;
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+    color: var(--navy);
+    transition:
+      border-color 0.4s,
+      box-shadow 0.4s;
+  }
+  .lang-pill.is-open {
+    border-color: var(--gold);
+    box-shadow: 0 14px 32px -16px rgba(15, 27, 61, 0.3);
+  }
+  .lang-pill-trigger,
+  .lang-pill-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 6px 18px;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+      background-color 0.35s,
+      color 0.35s;
+  }
+  .lang-pill-trigger:hover,
+  .lang-pill.is-open .lang-pill-trigger,
+  .lang-pill-item:hover {
+    background-color: var(--navy);
+    color: var(--crema);
+  }
+  .lang-pill-item {
+    border-top: 1px solid color-mix(in oklab, var(--sand) 60%, transparent);
+  }
+  .lang-pill-chevron {
+    width: 10px;
+    height: 10px;
+    flex: none;
+    transition: transform 0.45s var(--ease-brand);
+  }
+  .lang-pill.is-open .lang-pill-chevron {
+    transform: rotate(180deg);
+  }
+  .lang-pill-more {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s var(--ease-brand);
+  }
+  .lang-pill.is-open .lang-pill-more {
+    grid-template-rows: 1fr;
+  }
+  .lang-pill-more > div {
+    min-height: 0;
+    overflow: hidden;
+  }
+  .lang-pill-trigger:focus-visible,
+  .lang-pill-item:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: -3px;
   }
 }
