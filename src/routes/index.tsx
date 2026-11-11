@@ -116,7 +116,11 @@ function Home() {
       {/* HERO */}
       <section className="relative pt-16 md:pt-24 pb-24 md:pb-32 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-          <BrandLogo className="w-80 md:w-[30rem] lg:w-[38rem] h-auto mb-10 fade-in" />
+          <BrandLogo
+            className="w-80 md:w-[30rem] lg:w-[38rem] h-auto mb-10 fade-in"
+            wordmark="Spirits Project"
+            alt="Spirits Project Puglia"
+          />
 
           <div className="ornate ornate-stars mb-8 max-w-full px-6 py-4 text-center fade-in">
             <span className="badge-label md:text-[18px]">

@@ -4,6 +4,8 @@ interface Props {
   loading?: "eager" | "lazy";
   style?: React.CSSProperties;
   variant?: "full" | "compact";
+  /** Replaces the big "3 M S.r.l." line of the full lockup (e.g. on the home hero). */
+  wordmark?: string;
 }
 
 /**
@@ -23,6 +25,7 @@ export function BrandLogo({
   alt = "3 M S.r.l. Puglia",
   style,
   variant = "full",
+  wordmark,
 }: Props) {
   const isCompact = variant === "compact";
   const viewBox = isCompact ? "0 0 900 470" : "0 0 900 780";
@@ -109,14 +112,18 @@ export function BrandLogo({
         <>
           <text
             x="450"
-            y="505"
+            y={wordmark ? 500 : 505}
             textAnchor="middle"
             fill="#0f1b3d"
             fontFamily="'Noteworthy Bold', 'Noteworthy', 'Bradley Hand', cursive"
             fontWeight="700"
-            fontSize="120"
+            fontSize={wordmark ? 96 : 120}
           >
-            3 M <tspan fontSize="54">S.r.l.</tspan>
+            {wordmark ?? (
+              <>
+                3 M <tspan fontSize="54">S.r.l.</tspan>
+              </>
+            )}
           </text>
 
           <text
