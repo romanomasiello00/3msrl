@@ -283,13 +283,6 @@
   .ornate-interactive:focus-visible {
     border-image-source: var(--ornate-navy);
   }
-  .ornate-label {
-    font-family: var(--font-display);
-    font-variant-numeric: lining-nums;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--navy);
-  }
   /* Badge text inside the starred cartouches (hero, brand pages, story, footer): the nav's
      Fraunces italic in sentence case, so the labels read as a signature line. */
   .badge-label {

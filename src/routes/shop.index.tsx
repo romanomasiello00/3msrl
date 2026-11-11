@@ -57,7 +57,7 @@ function ShopPage() {
     <section className="px-6 pb-32 pt-24">
       <div className="mx-auto max-w-7xl">
         <header className="fade-up mx-auto mb-20 max-w-2xl text-center">
-          <p className="eyebrow mb-6">{t("shop.eyebrow")}</p>
+          <p className="section-label mb-6">{t("shop.eyebrow")}</p>
           <h1 className="mb-6 font-script text-5xl text-navy md:text-6xl">
             {t("shop.title")}
           </h1>
@@ -121,9 +121,7 @@ function ProductCard({
 
       <div className="mt-7 flex flex-1 flex-col">
         <h2 className="font-script text-3xl text-navy">{product.name}</h2>
-        <p className="mt-2 text-[10px] uppercase tracking-[0.3em] text-navy/45">
-          {product.subtitle[locale]}
-        </p>
+        <p className="font-signature mt-2 text-[15px] text-navy/60">{product.subtitle[locale]}</p>
 
         <div className="mt-5 max-h-0 overflow-hidden opacity-0 transition-all duration-700 ease-out group-hover:max-h-40 group-hover:opacity-100">
           <p className="text-sm leading-relaxed text-navy/65">{product.nose[locale]}</p>

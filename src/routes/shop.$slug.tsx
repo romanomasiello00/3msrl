@@ -82,7 +82,9 @@ function ProductPage() {
           </div>
 
           <div className="fade-up" style={{ animationDelay: "120ms" }}>
-            <p className="eyebrow mb-5">{product.subtitle[locale]}</p>
+            <p className="font-signature star-prefix mb-5 text-[17px] font-medium text-gold-ink">
+              {product.subtitle[locale]}
+            </p>
             <h1 className="font-script text-5xl text-navy md:text-6xl">
               <span className="font-brand">3 M S.r.l.</span> {product.name}
             </h1>
@@ -104,7 +106,7 @@ function ProductPage() {
             <button
               type="button"
               onClick={() => setOpen(true)}
-              className="group ornate ornate-sm ornate-solid ornate-interactive ornate-label mt-12 inline-flex items-center gap-4 px-9 py-4 text-[13px] tracking-[0.25em] text-crema hover:text-navy"
+              className="group ornate ornate-sm ornate-solid ornate-interactive font-signature font-medium mt-12 inline-flex items-center gap-4 px-9 py-4 text-[17px] text-crema hover:text-navy"
             >
               {available ? t("shop.reserve") : t("shop.notify")}
               <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -116,7 +118,7 @@ function ProductPage() {
         </div>
 
         <div className="mt-32 border-t border-navy/10 pt-16">
-          <p className="eyebrow mb-10">{t("shop.other")}</p>
+          <p className="section-label mb-10">{t("shop.other")}</p>
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
             {others.map((p) => (
               <Link
@@ -136,7 +138,7 @@ function ProductPage() {
                   <h2 className="font-script text-2xl text-navy transition-colors group-hover:text-gold">
                     {p.name}
                   </h2>
-                  <p className="mt-2 text-[10px] uppercase tracking-[0.3em] text-navy/45">
+                  <p className="font-signature mt-2 text-[15px] text-navy/60">
                     {p.subtitle[locale]}
                   </p>
                 </div>

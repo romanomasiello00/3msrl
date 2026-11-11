@@ -67,8 +67,13 @@ option B's double rules).
 - `.signature-link`: footer links (16.5 px) and "Read the story" (18 px) draw the double gold
   rule on hover/focus; the arrow slides 4 px. Works from a `.group` parent.
 - Footer columns wrap on narrow screens so the wider labels never overflow.
-- Left as they were: page-level eyebrows (The Collection, Contact, The Expression, Legal,
-  product subtitle), form labels, founder roles, "Photography coming soon", solid CTAs.
+- Third pass: page-level names (The Collection, Contact, The Expression, Legal, The other
+  expressions) use `.section-label`. The product subtitle is a gold `.font-signature` line with a
+  star on the product page and 15 px grey italic on the cards. "Photography coming soon" is 14 px
+  italic. Solid and outline CTAs (age gate, reserve, contact, 404) use Fraunces italic 17 px
+  inside the same cartouche. The now-unused `.ornate-label` rule is removed.
+- Left as they were: form labels, tasting-note labels, founder roles, small print under buttons
+  and the brand names on the cards (Cormorant italic).
 
 ## Code changes
 

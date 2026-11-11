@@ -20,7 +20,7 @@ function Page() {
   const { t } = useTranslation();
   return (
     <section className="pt-24 pb-32 px-6 max-w-3xl mx-auto">
-      <p className="eyebrow mb-6">{t("legal.eyebrow")}</p>
+      <p className="section-label mb-6">{t("legal.eyebrow")}</p>
       <h1 className="font-script text-5xl text-navy mb-10">{t("legal.privacy.title")}</h1>
       <div className="space-y-6 text-navy/80 leading-relaxed">
         <p>{t("legal.privacy.p1")}</p>

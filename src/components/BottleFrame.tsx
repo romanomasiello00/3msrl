@@ -46,7 +46,7 @@ export function BottleFrame({ image, alt, label, className, placeholderNote }: P
           <BrandMark className="w-12 opacity-60 transition-opacity duration-700 group-hover/frame:opacity-90" />
           <BottleSilhouette className="h-[52%] w-auto text-navy/40 transition-transform duration-[1200ms] ease-out group-hover/frame:-translate-y-1" />
           {placeholderNote && (
-            <p className="absolute bottom-7 text-center text-[9px] uppercase tracking-[0.35em] text-navy/45">
+            <p className="font-signature absolute bottom-7 text-center text-[14px] text-navy/60">
               {placeholderNote}
             </p>
           )}

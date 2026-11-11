@@ -46,7 +46,7 @@ function ExpressionPage() {
     <>
       <section className="pt-24 pb-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="eyebrow mb-6">{t("expression.eyebrow")}</p>
+          <p className="section-label mb-6">{t("expression.eyebrow")}</p>
           <h1 className="font-script text-6xl md:text-8xl text-navy mb-8">
             {t("expression.title")}
           </h1>

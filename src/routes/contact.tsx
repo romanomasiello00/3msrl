@@ -77,7 +77,7 @@ function ContactPage() {
     <section className="pt-24 pb-32 px-6">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <p className="eyebrow mb-6">{t("contact.eyebrow")}</p>
+          <p className="section-label mb-6">{t("contact.eyebrow")}</p>
           <h1 className="font-script text-5xl md:text-6xl text-navy mb-6">
             {t("contact.title")}
           </h1>
@@ -176,7 +176,7 @@ function ContactPage() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="group ornate ornate-sm ornate-solid ornate-interactive ornate-label inline-flex items-center gap-4 px-8 py-4 text-crema text-[13px] tracking-[0.25em] hover:text-navy disabled:opacity-60"
+                className="group ornate ornate-sm ornate-solid ornate-interactive font-signature font-medium inline-flex items-center gap-4 px-8 py-4 text-crema text-[17px] hover:text-navy disabled:opacity-60"
               >
                 {status === "sending" ? t("contact.sending") : t("contact.submit")}
                 <span className="transition-transform group-hover:translate-x-1">→</span>

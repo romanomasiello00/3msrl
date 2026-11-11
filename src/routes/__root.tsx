@@ -53,13 +53,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="ornate ornate-sm ornate-solid ornate-interactive ornate-label px-6 py-2.5 text-crema text-[13px] tracking-[0.2em] hover:text-navy"
+            className="ornate ornate-sm ornate-solid ornate-interactive font-signature font-medium px-6 py-2.5 text-crema text-[17px] hover:text-navy"
           >
             Try again
           </button>
           <a
             href="/"
-            className="ornate ornate-sm ornate-interactive ornate-label px-6 py-2.5 text-[13px] tracking-[0.2em]"
+            className="ornate ornate-sm ornate-interactive font-signature font-medium px-6 py-2.5 text-[17px] text-navy"
           >
             Home
           </a>
