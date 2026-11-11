@@ -10,55 +10,76 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
           <div className="space-y-6 max-w-md">
             <BrandLogo className="w-64 md:w-80 h-auto" loading="lazy" />
-            <p className="text-[11px] uppercase tracking-[0.25em] text-navy/70 leading-loose">
+            <p className="font-signature max-w-[30ch] text-[17px] leading-normal text-navy/85">
               {t("footer.tagline")}
             </p>
-            <p className="text-[10px] uppercase tracking-[0.4em] text-gold-ink">
+            <p className="font-signature star-prefix text-[16px] font-medium text-gold-ink">
               {t("badge.origin")}
             </p>
           </div>
 
-          <div className="flex gap-16">
+          <div className="flex flex-wrap gap-x-16 gap-y-10">
             <div className="space-y-4">
-              <p className="eyebrow">{t("footer.nav")}</p>
-              <ul className="space-y-2 text-sm text-navy/80">
+              <p className="section-label">{t("footer.nav")}</p>
+              <ul className="space-y-2.5">
                 <li>
-                  <Link to="/shop" className="hover:text-gold transition-colors">
+                  <Link
+                    to="/shop"
+                    className="font-signature signature-link text-[16.5px] text-navy/90"
+                  >
                     {t("nav.shop")}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/story" className="hover:text-gold transition-colors">
+                  <Link
+                    to="/story"
+                    className="font-signature signature-link text-[16.5px] text-navy/90"
+                  >
                     {t("nav.story")}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/tequila-1" className="hover:text-gold transition-colors">
+                  <Link
+                    to="/tequila-1"
+                    className="font-signature signature-link text-[16.5px] text-navy/90"
+                  >
                     {t("nav.tequila1")}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/tequila-2" className="hover:text-gold transition-colors">
+                  <Link
+                    to="/tequila-2"
+                    className="font-signature signature-link text-[16.5px] text-navy/90"
+                  >
                     {t("nav.tequila2")}
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="space-y-4">
-              <p className="eyebrow">{t("footer.connect")}</p>
-              <ul className="space-y-2 text-sm text-navy/80">
+              <p className="section-label">{t("footer.connect")}</p>
+              <ul className="space-y-2.5">
                 <li>
-                  <Link to="/contact" className="hover:text-gold transition-colors">
+                  <Link
+                    to="/contact"
+                    className="font-signature signature-link text-[16.5px] text-navy/90"
+                  >
                     {t("nav.contact")}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/legal/privacy" className="hover:text-gold transition-colors">
+                  <Link
+                    to="/legal/privacy"
+                    className="font-signature signature-link text-[16.5px] text-navy/90"
+                  >
                     {t("footer.legal.privacy")}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/legal/terms" className="hover:text-gold transition-colors">
+                  <Link
+                    to="/legal/terms"
+                    className="font-signature signature-link text-[16.5px] text-navy/90"
+                  >
                     {t("footer.legal.terms")}
                   </Link>
                 </li>

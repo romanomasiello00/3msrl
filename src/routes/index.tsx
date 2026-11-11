@@ -152,7 +152,7 @@ function Home() {
       <section className="py-24 md:py-32 px-6 bg-soft-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-center">
           <div className="lg:col-span-5">
-            <p className="eyebrow mb-6">{t("home.story.eyebrow")}</p>
+            <p className="section-label mb-6">{t("home.story.eyebrow")}</p>
             <h2 className="font-script text-4xl md:text-5xl text-navy mb-8">
               {t("home.story.title")}
             </h2>
@@ -194,10 +194,15 @@ function Home() {
 
             <Link
               to="/story"
-              className="group inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-navy hover:text-gold transition-colors"
+              className="group font-signature inline-flex items-center gap-3 text-[18px] font-medium text-navy"
             >
-              {t("home.story.cta")}
-              <span className="transition-transform group-hover:translate-x-1">→</span>
+              <span className="signature-link">{t("home.story.cta")}</span>
+              <span
+                aria-hidden="true"
+                className="font-sans not-italic text-gold-ink transition-transform group-hover:translate-x-1"
+              >
+                →
+              </span>
             </Link>
           </div>
 
@@ -220,9 +225,7 @@ function Home() {
       <section className="py-24 md:py-32 px-6 bg-navy text-soft-white">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 md:mb-20 max-w-3xl text-center mx-auto">
-            <p className="text-[10px] uppercase tracking-[0.35em] text-gold mb-6">
-              {t("home.brands.eyebrow")}
-            </p>
+            <p className="section-label mb-6 text-gold">{t("home.brands.eyebrow")}</p>
             <h2 className="font-script text-4xl md:text-5xl mb-6 text-balance">
               {t("home.brands.title")}
             </h2>
@@ -241,7 +244,7 @@ function Home() {
                 to={brand.to}
                 className="group bg-navy p-10 md:p-14 flex flex-col items-center text-center gap-4 hover:bg-navy/80 transition-colors"
               >
-                <span className="text-[10px] uppercase tracking-[0.3em] text-gold">
+                <span className="font-signature text-[16px] font-medium text-gold">
                   {t("shop.comingSoon")}
                 </span>
                 <span className="font-display text-3xl italic text-soft-white group-hover:text-gold transition-colors">

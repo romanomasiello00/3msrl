@@ -53,6 +53,23 @@ responsibly") drop the uppercase Cormorant label for `.badge-label`: the same
 Fraunces italic at 17 px (18 px from `md`, 15 px in the footer), sentence case,
 weight 400. Solid CTAs (age gate, reserve, contact, shop, 404) keep `.ornate-label`.
 
+## Section names, footer, links and status (second text pass)
+
+Approved from https://claude.ai/artifact/WRR7E6uDyaYJ2BgNTXzSuS (labels: option C text with
+option B's double rules).
+
+- `.section-label`: Fraunces italic 500, 14 px, uppercase, `letter-spacing: .2em`, gold-ink
+  (`text-gold` on navy), with a 30 px double gold rule on each side. Used for Heritage, The
+  story, The founders, Our brands and the footer's Navigation / Connect.
+- `.font-signature` (Fraunces italic, SOFT 100 / WONK 1; size and weight from utilities):
+  footer tagline 17 px, footer origin line 16 px with `.star-prefix`, "Coming soon" 16 px on
+  the brand cards and 15 px on the bottle frames.
+- `.signature-link`: footer links (16.5 px) and "Read the story" (18 px) draw the double gold
+  rule on hover/focus; the arrow slides 4 px. Works from a `.group` parent.
+- Footer columns wrap on narrow screens so the wider labels never overflow.
+- Left as they were: page-level eyebrows (The Collection, Contact, The Expression, Legal,
+  product subtitle), form labels, founder roles, "Photography coming soon", solid CTAs.
+
 ## Code changes
 
 - `src/routes/__root.tsx`: add `Fraunces` (ital, opsz, wght, SOFT, WONK) to the Google Fonts link.

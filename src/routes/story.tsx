@@ -77,7 +77,7 @@ function StoryPage() {
     <>
       <section className="pt-24 pb-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="eyebrow mb-6">{t("story.eyebrow")}</p>
+          <p className="section-label mb-6">{t("story.eyebrow")}</p>
           <h1 className="font-script text-5xl md:text-7xl text-navy text-balance mb-10">
             {t("story.title")}
           </h1>
@@ -114,7 +114,7 @@ function StoryPage() {
       <section className="py-24 md:py-32 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <p className="eyebrow mb-6">{t("story.founders")}</p>
+            <p className="section-label mb-6">{t("story.founders")}</p>
             <h2 className="font-script text-3xl md:text-4xl text-navy">
               {t("story.founders.title")}
             </h2>
