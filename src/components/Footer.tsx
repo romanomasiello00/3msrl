@@ -9,12 +9,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-24">
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
           <div className="space-y-6 max-w-md">
-            <BrandLogo
-              className="w-64 md:w-80 h-auto"
-              loading="lazy"
-              wordmark="Spirits Project"
-              alt="Spirits Project Puglia"
-            />
+            <BrandLogo className="w-64 md:w-80 h-auto" loading="lazy" />
             <p className="font-signature max-w-[30ch] text-[17px] leading-normal text-navy/85">
               {t("footer.tagline")}
             </p>

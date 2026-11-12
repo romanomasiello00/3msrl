@@ -42,7 +42,7 @@ export function ReserveDialog({ open, onClose, product }: Props) {
       String(fd.get("message") || ""),
     ].join("\n");
     const href = `mailto:${RESERVE_EMAIL}?subject=${encodeURIComponent(
-      `3 M S.r.l., ${t("shop.form.subject")}: ${expression}`,
+      `Spirits Project, ${t("shop.form.subject")}: ${expression}`,
     )}&body=${encodeURIComponent(body)}`;
     window.location.href = href;
     setSent(true);
@@ -71,7 +71,7 @@ export function ReserveDialog({ open, onClose, product }: Props) {
 
         {sent ? (
           <div className="py-10 text-center">
-            <p className="eyebrow font-brand mb-5">3 M S.r.l.</p>
+            <p className="eyebrow font-brand mb-5">Spirits Project</p>
             <p className="font-display text-3xl italic text-navy">{t("shop.form.success")}</p>
             <p className="mt-4 text-sm leading-relaxed text-navy/60">
               {t("shop.form.successBody")}
@@ -88,7 +88,7 @@ export function ReserveDialog({ open, onClose, product }: Props) {
           <>
             <p className="eyebrow mb-4">{t("shop.reserve")}</p>
             <h2 className="font-script text-3xl text-navy">
-              <span className="font-brand">3 M S.r.l.</span> {product.name}
+              <span className="font-brand">Spirits Project</span> {product.name}
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-navy/60">{t("shop.form.intro")}</p>
 

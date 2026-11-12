@@ -24,7 +24,7 @@ const en: Dict = {
   "shop.eyebrow": "The Collection",
   "shop.title": "Three expressions, one light",
   "shop.intro":
-    "Every bottle of 3 M S.r.l. begins with the same blue agave and the same slow gesture. What changes is time. Allocations are limited, write to us to reserve yours.",
+    "Every bottle of Spirits Project begins with the same blue agave and the same slow gesture. What changes is time. Allocations are limited, write to us to reserve yours.",
   "shop.available": "Available",
   "shop.comingSoon": "Coming soon",
   "shop.reserve": "Reserve",
@@ -41,7 +41,7 @@ const en: Dict = {
   "shop.back": "← Back to the collection",
   "shop.other": "The other expressions",
   "shop.noPurchase":
-    "3 M S.r.l. is not sold online. Every request is handled personally by us.",
+    "Spirits Project is not sold online. Every request is handled personally by us.",
 
   "shop.form.intro":
     "Leave us your details and we'll reply personally with availability and delivery.",
@@ -61,7 +61,7 @@ const en: Dict = {
   "badge.origin": "A house of tequila, born in Puglia",
   "hero.title": "Where the golden soul\nof Mexico meets\nthe timeless light\nof Puglia.",
   "hero.subtitle":
-    "3 M S.r.l. is born where two sun-blessed lands meet. A house of tequila brands, crafted with precision and rooted in place.",
+    "Spirits Project is born where two sun-blessed lands meet. A house of tequila brands, crafted with precision and rooted in place.",
 
   "home.story.eyebrow": "Heritage",
   "home.story.title": "Three friends, two lands",
@@ -72,7 +72,7 @@ const en: Dict = {
   "home.brands.eyebrow": "Our Brands",
   "home.brands.title": "Two tequilas, one house",
   "home.brands.body":
-    "3 M S.r.l. is building a portfolio of tequila brands, each with its own character. The first expressions are coming soon.",
+    "Spirits Project is building a portfolio of tequila brands, each with its own character. The first expressions are coming soon.",
 
   "story.eyebrow": "The Story",
   "story.title": "Three friends, two lands",
@@ -81,7 +81,7 @@ const en: Dict = {
   "story.p2":
     "From those roots grew a larger passion: the world of spirits, and tequila above all. Those who know fermentation, time and the patience of the land recognise in agave the same language as olive trees and vines.",
   "story.p3":
-    "So, in recent years, they set out on a new adventure: to create a tequila as faithful as possible to Mexican tradition, yet with an eye turned to Puglia. 3 M S.r.l. is made in Mexico, in the heart of the blue agave. It is in Puglia that it finds its Mediterranean home.",
+    "So, in recent years, they set out on a new adventure: to create a tequila as faithful as possible to Mexican tradition, yet with an eye turned to Puglia. Spirits Project is made in Mexico, in the heart of the blue agave. It is in Puglia that it finds its Mediterranean home.",
   "story.founders": "The founders",
   "story.founders.title": "Three friends, two lands",
   "story.lm.role": "CO-FOUNDER",
@@ -118,19 +118,19 @@ const en: Dict = {
   "footer.connect": "Connect",
   "footer.legal.privacy": "Privacy",
   "footer.legal.terms": "Terms",
-  "footer.rights": "© 2026 Spirits Project",
+  "footer.rights": "© 2026 3 M S.r.l.",
   "footer.responsible": "18+, Drink responsibly",
 
   "age.title": "A moment, please.",
-  "age.body": "You must be of legal drinking age in your country to enter 3 M S.r.l..",
+  "age.body": "You must be of legal drinking age in your country to enter Spirits Project.",
   "age.question": "Are you of legal drinking age?",
   "age.yes": "Yes, enter",
   "age.no": "No",
   "age.rejected":
     "We appreciate your honesty. Please return once you have reached the legal drinking age in your country.",
-  "age.disclaimer": "3 M S.r.l. reminds you to enjoy responsibly.",
+  "age.disclaimer": "Spirits Project reminds you to enjoy responsibly.",
 
-  "brandPage.eyebrow": "3 M S.r.l.",
+  "brandPage.eyebrow": "Spirits Project",
   "brandPage.body": "We're crafting something new. This brand will be unveiled soon.",
 
   "legal.eyebrow": "Legal",
@@ -141,8 +141,8 @@ const en: Dict = {
     "Any personal data submitted via the contact form is used only to respond to your enquiry and is never shared with third parties.",
   "legal.terms.title": "Terms",
   "legal.terms.p1":
-    "3 M S.r.l. is intended for adults of legal drinking age. By entering this site you confirm that you have reached the legal drinking age in your country.",
-  "legal.terms.p2": "Please enjoy 3 M S.r.l. responsibly.",
+    "Spirits Project is intended for adults of legal drinking age. By entering this site you confirm that you have reached the legal drinking age in your country.",
+  "legal.terms.p2": "Please enjoy Spirits Project responsibly.",
 
   "notFound.body": "This page hasn't found its home yet.",
   "notFound.home": "← Return home",
@@ -159,7 +159,7 @@ const it: Dict = {
   "shop.eyebrow": "La Collezione",
   "shop.title": "Tre espressioni, una sola luce",
   "shop.intro":
-    "Ogni bottiglia di 3 M S.r.l. nasce dalla stessa agave blu e dallo stesso gesto lento. Ciò che cambia è il tempo. Le allocazioni sono limitate: scrivici per riservare la tua.",
+    "Ogni bottiglia di Spirits Project nasce dalla stessa agave blu e dallo stesso gesto lento. Ciò che cambia è il tempo. Le allocazioni sono limitate: scrivici per riservare la tua.",
   "shop.available": "Disponibile",
   "shop.comingSoon": "In arrivo",
   "shop.reserve": "Riserva",
@@ -176,7 +176,7 @@ const it: Dict = {
   "shop.back": "← Torna alla collezione",
   "shop.other": "Le altre espressioni",
   "shop.noPurchase":
-    "3 M S.r.l. non vende online. Ogni richiesta viene seguita personalmente da noi.",
+    "Spirits Project non vende online. Ogni richiesta viene seguita personalmente da noi.",
 
   "shop.form.intro":
     "Lascia i tuoi dati: ti risponderemo personalmente con disponibilità e modalità di consegna.",
@@ -196,7 +196,7 @@ const it: Dict = {
   "badge.origin": "Una casa di tequila, nata in Puglia",
   "hero.title": "Dove l'anima\ndorata del Messico\nincontra la luce\neterna della Puglia.",
   "hero.subtitle":
-    "3 M S.r.l. nasce dove due terre baciate dal sole si incontrano. Una casa di marchi di tequila, fatta con precisione e radicata nel luogo.",
+    "Spirits Project nasce dove due terre baciate dal sole si incontrano. Una casa di marchi di tequila, fatta con precisione e radicata nel luogo.",
 
   "home.story.eyebrow": "Origini",
   "home.story.title": "Tre amici, due terre",
@@ -207,7 +207,7 @@ const it: Dict = {
   "home.brands.eyebrow": "I Nostri Marchi",
   "home.brands.title": "Due tequila, una casa",
   "home.brands.body":
-    "3 M S.r.l. sta costruendo un portfolio di marchi di tequila, ognuno con il proprio carattere. Le prime espressioni arrivano presto.",
+    "Spirits Project sta costruendo un portfolio di marchi di tequila, ognuno con il proprio carattere. Le prime espressioni arrivano presto.",
 
   "story.eyebrow": "La Storia",
   "story.title": "Tre amici, due terre",
@@ -216,7 +216,7 @@ const it: Dict = {
   "story.p2":
     "Da queste radici è nata una passione più grande: il mondo dei distillati, e la tequila su tutti. Chi conosce la fermentazione, il tempo e la pazienza della terra riconosce nell'agave la stessa lingua degli ulivi e delle vigne.",
   "story.p3":
-    "Così, negli ultimi anni, hanno intrapreso una nuova avventura: creare una tequila il più possibile fedele alla tradizione messicana, ma con uno sguardo rivolto alla Puglia. 3 M S.r.l. è prodotta in Messico, nel cuore dell'agave blu. È in Puglia che trova la sua casa mediterranea.",
+    "Così, negli ultimi anni, hanno intrapreso una nuova avventura: creare una tequila il più possibile fedele alla tradizione messicana, ma con uno sguardo rivolto alla Puglia. Spirits Project è prodotta in Messico, nel cuore dell'agave blu. È in Puglia che trova la sua casa mediterranea.",
   "story.founders": "I fondatori",
   "story.founders.title": "Tre amici, due terre",
   "story.lm.role": "CO-FOUNDER",
@@ -253,20 +253,20 @@ const it: Dict = {
   "footer.connect": "Contatti",
   "footer.legal.privacy": "Privacy",
   "footer.legal.terms": "Termini",
-  "footer.rights": "© 2026 Spirits Project",
+  "footer.rights": "© 2026 3 M S.r.l.",
   "footer.responsible": "18+, Bevi responsabilmente",
 
   "age.title": "Un momento, per favore.",
   "age.body":
-    "Devi aver raggiunto l'età legale per il consumo di alcolici nel tuo paese per entrare in 3 M S.r.l..",
+    "Devi aver raggiunto l'età legale per il consumo di alcolici nel tuo paese per entrare in Spirits Project.",
   "age.question": "Hai raggiunto l'età legale?",
   "age.yes": "Sì, entra",
   "age.no": "No",
   "age.rejected":
     "Ti ringraziamo per la sincerità. Torna quando avrai raggiunto l'età legale per il consumo di alcolici.",
-  "age.disclaimer": "3 M S.r.l. ti ricorda di bere responsabilmente.",
+  "age.disclaimer": "Spirits Project ti ricorda di bere responsabilmente.",
 
-  "brandPage.eyebrow": "3 M S.r.l.",
+  "brandPage.eyebrow": "Spirits Project",
   "brandPage.body": "Stiamo creando qualcosa di nuovo. Questo marchio sarà svelato presto.",
 
   "legal.eyebrow": "Note legali",
@@ -277,8 +277,8 @@ const it: Dict = {
     "I dati personali inviati tramite il modulo di contatto sono usati solo per rispondere alla tua richiesta e non vengono mai condivisi con terzi.",
   "legal.terms.title": "Termini",
   "legal.terms.p1":
-    "3 M S.r.l. è destinato ad adulti in età legale per il consumo di alcolici. Entrando in questo sito confermi di aver raggiunto l'età legale nel tuo paese.",
-  "legal.terms.p2": "Bevi 3 M S.r.l. con responsabilità.",
+    "Spirits Project è destinato ad adulti in età legale per il consumo di alcolici. Entrando in questo sito confermi di aver raggiunto l'età legale nel tuo paese.",
+  "legal.terms.p2": "Bevi Spirits Project con responsabilità.",
 
   "notFound.body": "Questa pagina non ha ancora trovato la sua casa.",
   "notFound.home": "← Torna alla home",
@@ -295,7 +295,7 @@ const es: Dict = {
   "shop.eyebrow": "La Colección",
   "shop.title": "Tres expresiones, una sola luz",
   "shop.intro":
-    "Cada botella de 3 M S.r.l. nace del mismo agave azul y del mismo gesto lento. Lo que cambia es el tiempo. Las asignaciones son limitadas: escríbenos para reservar la tuya.",
+    "Cada botella de Spirits Project nace del mismo agave azul y del mismo gesto lento. Lo que cambia es el tiempo. Las asignaciones son limitadas: escríbenos para reservar la tuya.",
   "shop.available": "Disponible",
   "shop.comingSoon": "Próximamente",
   "shop.reserve": "Reservar",
@@ -312,7 +312,7 @@ const es: Dict = {
   "shop.back": "← Volver a la colección",
   "shop.other": "Las otras expresiones",
   "shop.noPurchase":
-    "3 M S.r.l. no se vende en línea. Cada solicitud la atendemos personalmente.",
+    "Spirits Project no se vende en línea. Cada solicitud la atendemos personalmente.",
 
   "shop.form.intro":
     "Déjanos tus datos y te responderemos personalmente con la disponibilidad y la entrega.",
@@ -332,7 +332,7 @@ const es: Dict = {
   "badge.origin": "Una casa de tequila, nacida en Puglia",
   "hero.title": "Donde el alma dorada\nde México se encuentra\ncon la luz eterna\nde Puglia.",
   "hero.subtitle":
-    "3 M S.r.l. nace donde se encuentran dos tierras bendecidas por el sol. Una casa de marcas de tequila, elaborada con precisión y arraigada en el lugar.",
+    "Spirits Project nace donde se encuentran dos tierras bendecidas por el sol. Una casa de marcas de tequila, elaborada con precisión y arraigada en el lugar.",
 
   "home.story.eyebrow": "Orígenes",
   "home.story.title": "Tres amigos, dos tierras",
@@ -343,7 +343,7 @@ const es: Dict = {
   "home.brands.eyebrow": "Nuestras Marcas",
   "home.brands.title": "Dos tequilas, una casa",
   "home.brands.body":
-    "3 M S.r.l. está construyendo un portafolio de marcas de tequila, cada una con su propio carácter. Las primeras expresiones llegan pronto.",
+    "Spirits Project está construyendo un portafolio de marcas de tequila, cada una con su propio carácter. Las primeras expresiones llegan pronto.",
 
   "story.eyebrow": "La Historia",
   "story.title": "Tres amigos, dos tierras",
@@ -352,7 +352,7 @@ const es: Dict = {
   "story.p2":
     "De esas raíces surgió una pasión más grande: el mundo de los destilados, y el tequila sobre todo. Quien conoce la fermentación, el tiempo y la paciencia de la tierra reconoce en el agave el mismo lenguaje que los olivos y las viñas.",
   "story.p3":
-    "Así, en los últimos años, emprendieron una nueva aventura: crear un tequila lo más fiel posible a la tradición mexicana, pero con la mirada puesta en Puglia. 3 M S.r.l. se elabora en México, en el corazón del agave azul. Es en Puglia donde encuentra su hogar mediterráneo.",
+    "Así, en los últimos años, emprendieron una nueva aventura: crear un tequila lo más fiel posible a la tradición mexicana, pero con la mirada puesta en Puglia. Spirits Project se elabora en México, en el corazón del agave azul. Es en Puglia donde encuentra su hogar mediterráneo.",
   "story.founders": "Los fundadores",
   "story.founders.title": "Tres amigos, dos tierras",
   "story.lm.role": "COFUNDADOR",
@@ -391,20 +391,20 @@ const es: Dict = {
   "footer.connect": "Contacto",
   "footer.legal.privacy": "Privacidad",
   "footer.legal.terms": "Términos",
-  "footer.rights": "© 2026 Spirits Project",
+  "footer.rights": "© 2026 3 M S.r.l.",
   "footer.responsible": "+18, Bebe con responsabilidad",
 
   "age.title": "Un momento, por favor.",
   "age.body":
-    "Debes tener la edad legal para consumir alcohol en tu país para entrar en 3 M S.r.l..",
+    "Debes tener la edad legal para consumir alcohol en tu país para entrar en Spirits Project.",
   "age.question": "¿Tienes la edad legal para consumir alcohol?",
   "age.yes": "Sí, entrar",
   "age.no": "No",
   "age.rejected":
     "Agradecemos tu sinceridad. Vuelve cuando hayas alcanzado la edad legal para consumir alcohol en tu país.",
-  "age.disclaimer": "3 M S.r.l. te recuerda disfrutar con responsabilidad.",
+  "age.disclaimer": "Spirits Project te recuerda disfrutar con responsabilidad.",
 
-  "brandPage.eyebrow": "3 M S.r.l.",
+  "brandPage.eyebrow": "Spirits Project",
   "brandPage.body": "Estamos creando algo nuevo. Esta marca se presentará pronto.",
 
   "legal.eyebrow": "Aviso legal",
@@ -415,8 +415,8 @@ const es: Dict = {
     "Los datos personales enviados mediante el formulario de contacto se usan únicamente para responder a tu consulta y nunca se comparten con terceros.",
   "legal.terms.title": "Términos",
   "legal.terms.p1":
-    "3 M S.r.l. está dirigido a adultos con edad legal para consumir alcohol. Al entrar en este sitio confirmas que has alcanzado la edad legal en tu país.",
-  "legal.terms.p2": "Disfruta de 3 M S.r.l. con responsabilidad.",
+    "Spirits Project está dirigido a adultos con edad legal para consumir alcohol. Al entrar en este sitio confirmas que has alcanzado la edad legal en tu país.",
+  "legal.terms.p2": "Disfruta de Spirits Project con responsabilidad.",
 
   "notFound.body": "Esta página aún no ha encontrado su hogar.",
   "notFound.home": "← Volver al inicio",

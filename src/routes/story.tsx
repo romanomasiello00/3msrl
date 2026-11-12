@@ -6,17 +6,17 @@ import storyPuglia from "@/assets/story-puglia.jpg";
 export const Route = createFileRoute("/story")({
   head: () => ({
     meta: [
-      { title: "The Story, 3 M S.r.l." },
+      { title: "The Story, Spirits Project" },
       {
         name: "description",
         content:
-          "Three friends, two lands. Luigi Marinaro, Romano Masiello and Luigi Pio Marinaro on how 3 M S.r.l. was born between Puglia and Mexico.",
+          "Three friends, two lands. Luigi Marinaro, Romano Masiello and Luigi Pio Marinaro on how Spirits Project was born between Puglia and Mexico.",
       },
-      { property: "og:title", content: "The Story, 3 M S.r.l." },
+      { property: "og:title", content: "The Story, Spirits Project" },
       {
         property: "og:description",
         content:
-          "Three friends, two lands. How 3 M S.r.l. was born between Puglia and Mexico.",
+          "Three friends, two lands. How Spirits Project was born between Puglia and Mexico.",
       },
       { property: "og:url", content: "/story" },
     ],
@@ -27,12 +27,12 @@ export const Route = createFileRoute("/story")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "AboutPage",
-          name: "The Story, 3 M S.r.l.",
+          name: "The Story, Spirits Project",
           description:
-            "Three friends from Puglia and their love for Mexico led to 3 M S.r.l., a tequila with a Mexican soul and a Pugliese spirit.",
+            "Three friends from Puglia and their love for Mexico led to Spirits Project, a tequila with a Mexican soul and a Pugliese spirit.",
           mainEntity: {
             "@type": "Organization",
-            name: "3 M S.r.l.",
+            name: "Spirits Project",
             slogan: "Where the golden soul of Mexico meets the timeless light of Puglia.",
             founder: [
               { "@type": "Person", name: "Luigi Marinaro" },

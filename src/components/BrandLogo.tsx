@@ -4,12 +4,10 @@ interface Props {
   loading?: "eager" | "lazy";
   style?: React.CSSProperties;
   variant?: "full" | "compact";
-  /** Replaces the big "3 M S.r.l." line of the full lockup (e.g. on the home hero). */
-  wordmark?: string;
 }
 
 /**
- * 3 M S.r.l. brand lockup — SVG so it stays sharp at every size.
+ * Spirits Project brand lockup — SVG so it stays sharp at every size.
  *
  * Emblem construction (matches the reference the client approved):
  *   – gold 8-point star outline
@@ -17,15 +15,14 @@ interface Props {
  *   – 28 tapered needle rays radiating outward, alternating opacity
  *   – navy-outlined 3-leaf lotus centerpiece filled cream
  *
- * variant="full"    → emblem + 3 M S.r.l. + ✹ PUGLIA ✹ + SOLE • TERRA • MARE • TEMPO
+ * variant="full"    → emblem + Spirits Project + ✹ PUGLIA ✹ + SOLE • TERRA • MARE • TEMPO
  * variant="compact" → emblem + ✹ PUGLIA ✹ (used in the sticky header)
  */
 export function BrandLogo({
   className,
-  alt = "3 M S.r.l. Puglia",
+  alt = "Spirits Project Puglia",
   style,
   variant = "full",
-  wordmark,
 }: Props) {
   const isCompact = variant === "compact";
   const viewBox = isCompact ? "0 0 900 470" : "0 0 900 780";
@@ -112,18 +109,14 @@ export function BrandLogo({
         <>
           <text
             x="450"
-            y={wordmark ? 500 : 505}
+            y="500"
             textAnchor="middle"
             fill="#0f1b3d"
             fontFamily="'Noteworthy Bold', 'Noteworthy', 'Bradley Hand', cursive"
             fontWeight="700"
-            fontSize={wordmark ? 96 : 120}
+            fontSize="96"
           >
-            {wordmark ?? (
-              <>
-                3 M <tspan fontSize="54">S.r.l.</tspan>
-              </>
-            )}
+            Spirits Project
           </text>
 
           <text

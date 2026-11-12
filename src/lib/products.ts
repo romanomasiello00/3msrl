@@ -43,9 +43,9 @@ export const products: Product[] = [
       es: "Sin reposo, Agave puro",
     },
     intro: {
-      en: "The first light. Bottled straight after distillation, Blanco is 3 M S.r.l. without a veil, the raw voice of the blue agave, bright and mineral.",
-      it: "La prima luce. Imbottigliata subito dopo la distillazione, Blanco è 3 M S.r.l. senza velo, la voce nuda dell'agave blu, luminosa e minerale.",
-      es: "La primera luz. Embotellado justo tras la destilación, Blanco es 3 M S.r.l. sin velo, la voz desnuda del agave azul, luminosa y mineral.",
+      en: "The first light. Bottled straight after distillation, Blanco is Spirits Project without a veil, the raw voice of the blue agave, bright and mineral.",
+      it: "La prima luce. Imbottigliata subito dopo la distillazione, Blanco è Spirits Project senza velo, la voce nuda dell'agave blu, luminosa e minerale.",
+      es: "La primera luz. Embotellado justo tras la destilación, Blanco es Spirits Project sin velo, la voz desnuda del agave azul, luminosa y mineral.",
     },
     nose: {
       en: "Cooked agave, lime zest, wet stone.",
@@ -81,9 +81,9 @@ export const products: Product[] = [
       es: "Reposado en roble, La firma",
     },
     intro: {
-      en: "The heart of 3 M S.r.l. Slow-cooked agave, copper-pot distilled, then rested in oak until it finds its balance. A reposado that speaks softly.",
-      it: "Il cuore di 3 M S.r.l. Agave cotta lentamente, distillata in alambicco di rame, poi riposata in rovere finché non trova il suo equilibrio. Un reposado che parla piano.",
-      es: "El corazón de 3 M S.r.l. Agave cocido lentamente, destilado en alambique de cobre y reposado en roble hasta encontrar su equilibrio. Un reposado que habla bajito.",
+      en: "The heart of Spirits Project Slow-cooked agave, copper-pot distilled, then rested in oak until it finds its balance. A reposado that speaks softly.",
+      it: "Il cuore di Spirits Project Agave cotta lentamente, distillata in alambicco di rame, poi riposata in rovere finché non trova il suo equilibrio. Un reposado che parla piano.",
+      es: "El corazón de Spirits Project Agave cocido lentamente, destilado en alambique de cobre y reposado en roble hasta encontrar su equilibrio. Un reposado que habla bajito.",
     },
     nose: {
       en: "Cooked agave, vanilla, orange peel and a breath of Mediterranean scrub.",
@@ -119,9 +119,9 @@ export const products: Product[] = [
       es: "Largo reposo, Edición limitada",
     },
     intro: {
-      en: "Time made visible. A longer rest in oak deepens the colour and rounds every edge, 3 M S.r.l. at its most contemplative.",
-      it: "Il tempo reso visibile. Un riposo più lungo in rovere approfondisce il colore e arrotonda ogni spigolo, 3 M S.r.l. nella sua forma più contemplativa.",
-      es: "El tiempo hecho visible. Un reposo más largo en roble profundiza el color y redondea cada arista, 3 M S.r.l. en su forma más contemplativa.",
+      en: "Time made visible. A longer rest in oak deepens the colour and rounds every edge, Spirits Project at its most contemplative.",
+      it: "Il tempo reso visibile. Un riposo più lungo in rovere approfondisce il colore e arrotonda ogni spigolo, Spirits Project nella sua forma più contemplativa.",
+      es: "El tiempo hecho visible. Un reposo más largo en roble profundiza el color y redondea cada arista, Spirits Project en su forma más contemplativa.",
     },
     nose: {
       en: "Dried fig, toasted almond, cocoa and warm spice.",

@@ -8,13 +8,13 @@ import { BrandLogo } from "@/components/BrandLogo";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "3 M S.r.l., A House of Tequila Brands" },
+      { title: "Spirits Project, A House of Tequila Brands" },
       {
         name: "description",
         content:
-          "Where the golden soul of Mexico meets the timeless light of Puglia. 3 M S.r.l. is a house of tequila brands, crafted with care and rooted in place.",
+          "Where the golden soul of Mexico meets the timeless light of Puglia. Spirits Project is a house of tequila brands, crafted with care and rooted in place.",
       },
-      { property: "og:title", content: "3 M S.r.l., A House of Tequila Brands" },
+      { property: "og:title", content: "Spirits Project, A House of Tequila Brands" },
       {
         property: "og:description",
         content:
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "3 M S.r.l.",
+          name: "Spirits Project",
           url: "https://spiritsproject.it/",
           description:
             "Where the golden soul of Mexico meets the timeless light of Puglia.",
@@ -116,11 +116,7 @@ function Home() {
       {/* HERO */}
       <section className="relative pt-16 md:pt-24 pb-24 md:pb-32 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-          <BrandLogo
-            className="w-80 md:w-[30rem] lg:w-[38rem] h-auto mb-10 fade-in"
-            wordmark="Spirits Project"
-            alt="Spirits Project Puglia"
-          />
+          <BrandLogo className="w-80 md:w-[30rem] lg:w-[38rem] h-auto mb-10 fade-in" />
 
           <div className="ornate ornate-stars mb-8 max-w-full px-6 py-7 text-center fade-in">
             <span className="badge-label md:text-[18px]">{t("badge.origin")}</span>

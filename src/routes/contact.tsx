@@ -7,16 +7,17 @@ import { useTranslation } from "@/lib/i18n";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact, 3 M S.r.l." },
+      { title: "Contact, Spirits Project" },
       {
         name: "description",
-        content: "Write to 3 M S.r.l. for general enquiries, distribution, press or hospitality.",
+        content:
+          "Write to Spirits Project for general enquiries, distribution, press or hospitality.",
       },
-      { property: "og:title", content: "Contact, 3 M S.r.l." },
+      { property: "og:title", content: "Contact, Spirits Project" },
       {
         property: "og:description",
         content:
-          "Write to 3 M S.r.l. for enquiries about the brand, distribution, hospitality or press.",
+          "Write to Spirits Project for enquiries about the brand, distribution, hospitality or press.",
       },
       { property: "og:url", content: "/contact" },
     ],

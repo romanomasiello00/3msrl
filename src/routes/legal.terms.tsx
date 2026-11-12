@@ -4,11 +4,11 @@ import { useTranslation } from "@/lib/i18n";
 export const Route = createFileRoute("/legal/terms")({
   head: () => ({
     meta: [
-      { title: "Terms, 3 M S.r.l." },
-      { name: "description", content: "Terms of use for the 3 M S.r.l. site, including legal drinking age and responsible enjoyment." },
+      { title: "Terms, Spirits Project" },
+      { name: "description", content: "Terms of use for the Spirits Project site, including legal drinking age and responsible enjoyment." },
       { name: "robots", content: "noindex" },
-      { property: "og:title", content: "Terms of Use, 3 M S.r.l." },
-      { property: "og:description", content: "Conditions for using the 3 M S.r.l. site: legal drinking age, content use and responsible enjoyment." },
+      { property: "og:title", content: "Terms of Use, Spirits Project" },
+      { property: "og:description", content: "Conditions for using the Spirits Project site: legal drinking age, content use and responsible enjoyment." },
       { property: "og:url", content: "/legal/terms" },
     ],
     links: [{ rel: "canonical", href: "/legal/terms" }],

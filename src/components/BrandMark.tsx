@@ -5,7 +5,7 @@ interface Props {
 }
 
 /**
- * 3 M S.r.l. sunburst mark derived from the brand logo.
+ * Spirits Project sunburst mark derived from the brand logo.
  * Pure SVG so it stays crisp and inherits colors.
  */
 export function BrandMark({ className, gold = "#c9a84c", navy = "#0f1b3d" }: Props) {
@@ -57,14 +57,12 @@ export function BrandMark({ className, gold = "#c9a84c", navy = "#0f1b3d" }: Pro
   );
 }
 
-/** Full stacked wordmark: mark + 3 M S.r.l. + tagline */
+/** Full stacked wordmark: mark + Spirits Project + tagline */
 export function BrandWordmark({ className }: { className?: string }) {
   return (
     <div className={"flex flex-col items-center gap-1 " + (className ?? "")}>
       <BrandMark className="size-8" />
-      <span className="font-brand text-2xl text-navy leading-none">
-        3 M S.r.l.
-      </span>
+      <span className="font-brand text-2xl text-navy leading-none">Spirits Project</span>
       <span className="text-[8px] uppercase tracking-[0.4em] text-gold-ink">
         Tequila, Puglia
       </span>

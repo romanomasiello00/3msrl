@@ -4,10 +4,10 @@ import { useTranslation } from "@/lib/i18n";
 export const Route = createFileRoute("/legal/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy, 3 M S.r.l." },
+      { title: "Privacy, Spirits Project" },
       { name: "description", content: "How 3 M S.r.l. handles the personal data you share through the site and contact form." },
       { name: "robots", content: "noindex" },
-      { property: "og:title", content: "Privacy Notice, 3 M S.r.l." },
+      { property: "og:title", content: "Privacy Notice, Spirits Project" },
       { property: "og:description", content: "How 3 M S.r.l. collects, uses and protects personal data submitted through this site." },
       { property: "og:url", content: "/legal/privacy" },
     ],
