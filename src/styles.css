@@ -246,34 +246,47 @@
   }
 }
 
-/* Ornamental cartouche: double gold rule with ogee shoulders (vintage spirits label).
+/* Ornamental cartouche: double gold rule with ogee shoulders (vintage spirits label), drawn in bronze (gold-ink) with gold star finials so it reads on cream.
    Frame is a 9-slice SVG border-image, so it stretches to any badge or button without
    changing layout (border stays 1px; the image paints over the padding).
    .ornate-stars adds the two inner rules broken by sunburst finials (badges only). */
 @layer components {
   :root {
-    --ornate-gold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64' fill='none' stroke='%23c9a84c' stroke-width='1'%3E%3Cdefs%3E%3Cpath id='k' d='M26 .5H15C9.5 .5 6.5 3.5 6.5 8.5C6.5 12.5 .5 11.5 .5 17.5V26M29 3.5H18C12.5 3.5 9.5 6.5 9.5 11.5C9.5 15.5 3.5 14.5 3.5 20.5V29'/%3E%3C/defs%3E%3Cuse href='%23k'/%3E%3Cuse href='%23k' transform='matrix(-1 0 0 1 64 0)'/%3E%3Cuse href='%23k' transform='matrix(1 0 0 -1 0 64)'/%3E%3Cuse href='%23k' transform='matrix(-1 0 0 -1 64 64)'/%3E%3Cpath d='M26 .5H38M26 63.5H38M26 63.5M3.5 29V35M.5 26V38M63.5 26V38M60.5 29V35M29 3.5H35M29 60.5H35'/%3E%3C/svg%3E");
-    --ornate-navy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64' fill='none' stroke='%230f1b3d' stroke-width='1'%3E%3Cdefs%3E%3Cpath id='k' d='M26 .5H15C9.5 .5 6.5 3.5 6.5 8.5C6.5 12.5 .5 11.5 .5 17.5V26M29 3.5H18C12.5 3.5 9.5 6.5 9.5 11.5C9.5 15.5 3.5 14.5 3.5 20.5V29'/%3E%3C/defs%3E%3Cuse href='%23k'/%3E%3Cuse href='%23k' transform='matrix(-1 0 0 1 64 0)'/%3E%3Cuse href='%23k' transform='matrix(1 0 0 -1 0 64)'/%3E%3Cuse href='%23k' transform='matrix(-1 0 0 -1 64 64)'/%3E%3Cpath d='M26 .5H38M26 63.5H38M26 63.5M3.5 29V35M.5 26V38M63.5 26V38M60.5 29V35M29 3.5H35M29 60.5H35'/%3E%3C/svg%3E");
-    --ornate-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-5.5 -5.5 11 11'%3E%3Ccircle r='4' fill='%23f5efe4'/%3E%3Cpolygon fill='%23c9a84c' points='0.00,-5.00 0.46,-1.11 2.40,-2.40 1.11,-0.46 5.00,0.00 1.11,0.46 2.40,2.40 0.46,1.11 0.00,5.00 -0.46,1.11 -2.40,2.40 -1.11,0.46 -5.00,0.00 -1.11,-0.46 -2.40,-2.40 -0.46,-1.11'/%3E%3C/svg%3E");
+    --ornate-bronze: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64' fill='none' stroke='%237a5f18' stroke-width='1.92' stroke-linejoin='round'%3E%3Cdefs%3E%3Cpath id='o' d='M26 .5H15C9.5 .5 6.5 3.5 6.5 8.5C6.5 12.5 .5 11.5 .5 17.5V26'/%3E%3Cpath id='i' d='M29 3.5H18C12.5 3.5 9.5 6.5 9.5 11.5C9.5 15.5 3.5 14.5 3.5 20.5V29'/%3E%3Cg id='c'%3E%3Cuse href='%23o' transform='translate(0.46 0.46)'/%3E%3Cuse href='%23i' transform='translate(1.3 1.3)'/%3E%3C/g%3E%3C/defs%3E%3Cuse href='%23c'/%3E%3Cuse href='%23c' transform='matrix(-1 0 0 1 64 0)'/%3E%3Cuse href='%23c' transform='matrix(1 0 0 -1 0 64)'/%3E%3Cuse href='%23c' transform='matrix(-1 0 0 -1 64 64)'/%3E%3Cpath d='M26.46 0.96H37.54M26.46 63.04H37.54M0.96 26.46V37.54M63.04 26.46V37.54M30.3 4.8H33.7M30.3 59.2H33.7M4.8 30.3V33.7M59.2 30.3V33.7'/%3E%3C/svg%3E");
+    --ornate-bronze-sm: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64' fill='none' stroke='%237a5f18' stroke-width='2.57' stroke-linejoin='round'%3E%3Cdefs%3E%3Cpath id='o' d='M26 .5H15C9.5 .5 6.5 3.5 6.5 8.5C6.5 12.5 .5 11.5 .5 17.5V26'/%3E%3Cpath id='i' d='M29 3.5H18C12.5 3.5 9.5 6.5 9.5 11.5C9.5 15.5 3.5 14.5 3.5 20.5V29'/%3E%3Cg id='c'%3E%3Cuse href='%23o' transform='translate(0.79 0.79)'/%3E%3Cuse href='%23i' transform='translate(2.59 2.59)'/%3E%3C/g%3E%3C/defs%3E%3Cuse href='%23c'/%3E%3Cuse href='%23c' transform='matrix(-1 0 0 1 64 0)'/%3E%3Cuse href='%23c' transform='matrix(1 0 0 -1 0 64)'/%3E%3Cuse href='%23c' transform='matrix(-1 0 0 -1 64 64)'/%3E%3Cpath d='M26.79 1.29H37.21M26.79 62.71H37.21M1.29 26.79V37.21M62.71 26.79V37.21M31.59 6.09H32.41M31.59 57.91H32.41M6.09 31.59V32.41M57.91 31.59V32.41'/%3E%3C/svg%3E");
+    --ornate-navy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64' fill='none' stroke='%230f1b3d' stroke-width='1.92' stroke-linejoin='round'%3E%3Cdefs%3E%3Cpath id='o' d='M26 .5H15C9.5 .5 6.5 3.5 6.5 8.5C6.5 12.5 .5 11.5 .5 17.5V26'/%3E%3Cpath id='i' d='M29 3.5H18C12.5 3.5 9.5 6.5 9.5 11.5C9.5 15.5 3.5 14.5 3.5 20.5V29'/%3E%3Cg id='c'%3E%3Cuse href='%23o' transform='translate(0.46 0.46)'/%3E%3Cuse href='%23i' transform='translate(1.3 1.3)'/%3E%3C/g%3E%3C/defs%3E%3Cuse href='%23c'/%3E%3Cuse href='%23c' transform='matrix(-1 0 0 1 64 0)'/%3E%3Cuse href='%23c' transform='matrix(1 0 0 -1 0 64)'/%3E%3Cuse href='%23c' transform='matrix(-1 0 0 -1 64 64)'/%3E%3Cpath d='M26.46 0.96H37.54M26.46 63.04H37.54M0.96 26.46V37.54M63.04 26.46V37.54M30.3 4.8H33.7M30.3 59.2H33.7M4.8 30.3V33.7M59.2 30.3V33.7'/%3E%3C/svg%3E");
+    --ornate-navy-sm: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64' fill='none' stroke='%230f1b3d' stroke-width='2.57' stroke-linejoin='round'%3E%3Cdefs%3E%3Cpath id='o' d='M26 .5H15C9.5 .5 6.5 3.5 6.5 8.5C6.5 12.5 .5 11.5 .5 17.5V26'/%3E%3Cpath id='i' d='M29 3.5H18C12.5 3.5 9.5 6.5 9.5 11.5C9.5 15.5 3.5 14.5 3.5 20.5V29'/%3E%3Cg id='c'%3E%3Cuse href='%23o' transform='translate(0.79 0.79)'/%3E%3Cuse href='%23i' transform='translate(2.59 2.59)'/%3E%3C/g%3E%3C/defs%3E%3Cuse href='%23c'/%3E%3Cuse href='%23c' transform='matrix(-1 0 0 1 64 0)'/%3E%3Cuse href='%23c' transform='matrix(1 0 0 -1 0 64)'/%3E%3Cuse href='%23c' transform='matrix(-1 0 0 -1 64 64)'/%3E%3Cpath d='M26.79 1.29H37.21M26.79 62.71H37.21M1.29 26.79V37.21M62.71 26.79V37.21M31.59 6.09H32.41M31.59 57.91H32.41M6.09 31.59V32.41M57.91 31.59V32.41'/%3E%3C/svg%3E");
+    --ornate-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-5.5 -5.5 11 11'%3E%3Ccircle r='4.4' fill='%23f5efe4'/%3E%3Cpolygon fill='%23c9a84c' points='0.00,-5.00 0.73,-1.76 2.62,-2.62 1.76,-0.73 5.00,0.00 1.76,0.73 2.62,2.62 0.73,1.76 0.00,5.00 -0.73,1.76 -2.62,2.62 -1.76,0.73 -5.00,0.00 -1.76,-0.73 -2.62,-2.62 -0.73,-1.76'/%3E%3C/svg%3E");
   }
   .ornate {
     border: 1px solid transparent;
-    border-image: var(--ornate-gold) 24 / 20px stretch;
+    border-image: var(--ornate-bronze) 24 / 20px stretch;
   }
   .ornate-sm {
-    border-image-width: 12px;
+    border-image-source: var(--ornate-bronze-sm);
+    border-image-width: 14px;
   }
   .ornate-stars {
+    --star-size: 22px;
+    --star-margin: 3px;
+    --rule: 1.5px;
     background:
-      var(--ornate-star) 50% 4px / 11px 11px no-repeat border-box,
-      var(--ornate-star) 50% calc(100% - 4px) / 11px 11px no-repeat border-box,
-      linear-gradient(var(--gold), var(--gold)) 22px 9px / calc(100% - 44px) 1px no-repeat border-box,
-      linear-gradient(var(--gold), var(--gold)) 22px calc(100% - 9px) / calc(100% - 44px) 1px no-repeat border-box;
+      var(--ornate-star) 50% var(--star-margin) / var(--star-size) var(--star-size) no-repeat
+        border-box,
+      var(--ornate-star) 50% calc(100% - var(--star-margin)) / var(--star-size) var(--star-size)
+        no-repeat border-box,
+      linear-gradient(var(--gold-ink), var(--gold-ink)) 22px
+        calc(var(--star-margin) + var(--star-size) / 2 - var(--rule) / 2) / calc(100% - 44px)
+        var(--rule) no-repeat border-box,
+      linear-gradient(var(--gold-ink), var(--gold-ink)) 22px
+        calc(100% - (var(--star-margin) + var(--star-size) / 2 - var(--rule) / 2)) /
+        calc(100% - 44px) var(--rule) no-repeat border-box;
   }
   /* solid CTA: navy plate inset inside the double rule; gold plate on hover */
   .ornate-solid {
     --fill: var(--navy);
-    background: linear-gradient(var(--fill), var(--fill)) 5px 5px / calc(100% - 10px) calc(100% - 10px) no-repeat border-box;
+    background: linear-gradient(var(--fill), var(--fill)) 6px 6px / calc(100% - 12px)
+      calc(100% - 12px) no-repeat border-box;
   }
   .ornate-solid:hover:not(:disabled),
   .ornate-solid:focus-visible {
@@ -282,6 +295,10 @@
   .ornate-interactive:hover,
   .ornate-interactive:focus-visible {
     border-image-source: var(--ornate-navy);
+  }
+  .ornate-sm.ornate-interactive:hover,
+  .ornate-sm.ornate-interactive:focus-visible {
+    border-image-source: var(--ornate-navy-sm);
   }
   /* Badge text inside the starred cartouches (hero, brand pages, story, footer): the nav's
      Fraunces italic in sentence case, so the labels read as a signature line. */

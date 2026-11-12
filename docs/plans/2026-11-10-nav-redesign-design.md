@@ -75,6 +75,17 @@ option B's double rules).
 - Left as they were: form labels, tasting-note labels, founder roles, small print under buttons
   and the brand names on the cards (Cormorant italic).
 
+## Ornate frames (bronze variant)
+
+Approved from https://claude.ai/artifact/DszXUpThMC59MKgA8FCjU7 (option B). The cartouche
+border-images are drawn in bronze (`--gold-ink`) at about 1.5 px with a clear gap between the
+two rules; small frames (buttons, footer badge) use a 14 px border-image width so their lines
+are no longer half a pixel. Hover and focus switch to the same geometry in navy. The star
+finials grow from 11 px to 22 px (gold, fuller rays) and the inner rules are 1.5 px bronze.
+Starred badges get `py-7` so the larger stars do not touch the text; the solid CTA plate is
+inset 6 px. The contact card hugs its content (`w-fit`, about 440 px wide) instead of 672 px.
+The small star before labels (`.star-prefix`) is unchanged at 9 px.
+
 ## Code changes
 
 - `src/routes/__root.tsx`: add `Fraunces` (ital, opsz, wght, SOFT, WONK) to the Google Fonts link.

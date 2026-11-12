@@ -62,7 +62,7 @@ function PersonCard({ person }: { person: Contact }) {
         />
       </div>
       <div className="min-w-0 flex-1">
-        <h2 className="font-script text-3xl text-navy">{person.name}</h2>
+        <h2 className="font-display text-2xl text-navy">{person.name}</h2>
         <p className="font-signature star-prefix mb-5 mt-2 text-[15px] font-medium text-gold-ink">
           {t(person.role)}
         </p>
@@ -104,23 +104,23 @@ function ContactPage() {
           <p className="leading-relaxed text-navy/70">{t("contact.intro")}</p>
         </div>
 
-        <div className="ornate ornate-stars mx-auto max-w-2xl px-4 py-12 text-center sm:px-10 md:px-16">
-          <p className="font-signature star-prefix mb-5 text-[17px] font-medium text-gold-ink">
+        <div className="ornate ornate-stars mx-auto w-fit max-w-full px-4 py-9 text-center sm:px-11">
+          <p className="font-signature star-prefix mb-3 text-[17px] font-medium text-gold-ink">
             {t("contact.general")}
           </p>
           <ContactLine
             href={`mailto:${GENERAL_CONTACT.email}`}
             icon={<Mail {...ICON} />}
-            className="text-[17px] sm:text-[24px] md:text-[30px]"
+            className="text-[17px] sm:text-[22px] md:text-[24px]"
           >
             {GENERAL_CONTACT.email}
           </ContactLine>
           {GENERAL_CONTACT.phone && (
-            <div className="mt-5">
+            <div className="mt-3">
               <ContactLine
                 href={telHref(GENERAL_CONTACT.phone)}
                 icon={<Phone {...ICON} />}
-                className="text-[20px] md:text-[24px]"
+                className="text-[18px] md:text-[20px]"
               >
                 {GENERAL_CONTACT.phone}
               </ContactLine>

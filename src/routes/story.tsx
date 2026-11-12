@@ -105,7 +105,7 @@ function StoryPage() {
         </div>
 
         <div className="mt-16 flex justify-center">
-          <div className="ornate ornate-stars max-w-full px-8 py-4 text-center text-balance">
+          <div className="ornate ornate-stars max-w-full px-8 py-7 text-center text-balance">
             <span className="badge-label md:text-[18px]">Hecho en México, Imported to Puglia</span>
           </div>
         </div>

@@ -122,10 +122,8 @@ function Home() {
             alt="Spirits Project Puglia"
           />
 
-          <div className="ornate ornate-stars mb-8 max-w-full px-6 py-4 text-center fade-in">
-            <span className="badge-label md:text-[18px]">
-              {t("badge.origin")}
-            </span>
+          <div className="ornate ornate-stars mb-8 max-w-full px-6 py-7 text-center fade-in">
+            <span className="badge-label md:text-[18px]">{t("badge.origin")}</span>
           </div>
 
           <QuoteReveal text={t("hero.title")} />

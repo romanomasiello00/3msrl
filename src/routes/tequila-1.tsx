@@ -24,7 +24,7 @@ function BrandPlaceholder() {
         <h1 className="font-script text-5xl md:text-6xl text-navy mb-6">
           {t("nav.tequila1")}
         </h1>
-        <div className="ornate ornate-stars inline-block mb-8 max-w-full px-6 py-4">
+        <div className="ornate ornate-stars inline-block mb-8 max-w-full px-6 py-7">
           <span className="badge-label">{t("shop.comingSoon")}</span>
         </div>
         <p className="text-navy/70 leading-relaxed">{t("brandPage.body")}</p>
