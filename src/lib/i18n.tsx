@@ -118,7 +118,7 @@ const en: Dict = {
   "footer.connect": "Connect",
   "footer.legal.privacy": "Privacy",
   "footer.legal.terms": "Terms",
-  "footer.rights": "© 2026 3 M S.r.l.",
+  "footer.rights": "© 2026 Spirits Project",
   "footer.responsible": "18+, Drink responsibly",
 
   "age.title": "A moment, please.",
@@ -253,7 +253,7 @@ const it: Dict = {
   "footer.connect": "Contatti",
   "footer.legal.privacy": "Privacy",
   "footer.legal.terms": "Termini",
-  "footer.rights": "© 2026 3 M S.r.l.",
+  "footer.rights": "© 2026 Spirits Project",
   "footer.responsible": "18+, Bevi responsabilmente",
 
   "age.title": "Un momento, per favore.",
@@ -391,7 +391,7 @@ const es: Dict = {
   "footer.connect": "Contacto",
   "footer.legal.privacy": "Privacidad",
   "footer.legal.terms": "Términos",
-  "footer.rights": "© 2026 3 M S.r.l.",
+  "footer.rights": "© 2026 Spirits Project",
   "footer.responsible": "+18, Bebe con responsabilidad",
 
   "age.title": "Un momento, por favor.",
