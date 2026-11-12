@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, type FormEvent } from "react";
-import { z } from "zod";
+import { Mail, Phone } from "lucide-react";
+import type { ReactNode } from "react";
+import { GENERAL_CONTACT, TEAM, telHref, type Contact } from "@/lib/contacts";
 import { useTranslation } from "@/lib/i18n";
 
 export const Route = createFileRoute("/contact")({
@@ -9,8 +10,7 @@ export const Route = createFileRoute("/contact")({
       { title: "Contact, 3 M S.r.l." },
       {
         name: "description",
-        content:
-          "Write to 3 M S.r.l. for general enquiries, distribution, press or hospitality.",
+        content: "Write to 3 M S.r.l. for general enquiries, distribution, press or hospitality.",
       },
       { property: "og:title", content: "Contact, 3 M S.r.l." },
       {
@@ -25,168 +25,120 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
-const schema = z.object({
-  name: z.string().trim().min(1).max(100),
-  email: z.string().trim().email().max(255),
-  subject: z.string().trim().min(1).max(150),
-  category: z.enum(["info", "distribution", "press", "hospitality"]),
-  message: z.string().trim().min(10).max(2000),
-});
+const ICON = { size: 18, strokeWidth: 1.25 } as const;
 
-type Status = "idle" | "sending" | "sent" | "error";
+interface LineProps {
+  href: string;
+  icon: ReactNode;
+  className?: string;
+  children: string;
+}
+
+/* One tappable email or phone line: gold line icon, Fraunces italic text, double rule on hover. */
+function ContactLine({ href, icon, className = "", children }: LineProps) {
+  return (
+    <a
+      href={href}
+      className={`group font-signature inline-flex items-center gap-3 text-navy transition-colors hover:text-gold-ink ${className}`}
+    >
+      <span aria-hidden="true" className="shrink-0 text-gold">
+        {icon}
+      </span>
+      <span className="signature-link [overflow-wrap:anywhere]">{children}</span>
+    </a>
+  );
+}
+
+function PersonCard({ person }: { person: Contact }) {
+  const { t } = useTranslation();
+  return (
+    <div className="group/card flex flex-col items-center gap-6 rounded-md border border-navy/10 bg-soft-white/50 p-6 text-center transition-colors hover:border-gold/60 sm:flex-row sm:gap-8 sm:p-8 sm:text-left">
+      <div className="size-24 shrink-0 overflow-hidden rounded-full border border-navy/15 bg-white transition-colors group-hover/card:border-gold">
+        <img
+          src={person.image}
+          alt={`Portrait of ${person.name}`}
+          className="size-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <div className="min-w-0 flex-1">
+        <h2 className="font-script text-3xl text-navy">{person.name}</h2>
+        <p className="font-signature star-prefix mb-5 mt-2 text-[15px] font-medium text-gold-ink">
+          {t(person.role)}
+        </p>
+        <div className="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:gap-x-8">
+          {person.email && (
+            <ContactLine
+              href={`mailto:${person.email}`}
+              icon={<Mail {...ICON} />}
+              className="text-[16px]"
+            >
+              {person.email}
+            </ContactLine>
+          )}
+          {person.phone && (
+            <ContactLine
+              href={telHref(person.phone)}
+              icon={<Phone {...ICON} />}
+              className="text-[17px]"
+            >
+              {person.phone}
+            </ContactLine>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function ContactPage() {
   const { t } = useTranslation();
-  const [status, setStatus] = useState<Status>("idle");
-  const [errors, setErrors] = useState<Record<string, string>>({});
-
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setErrors({});
-    const fd = new FormData(e.currentTarget);
-    const raw = Object.fromEntries(fd.entries());
-    const parsed = schema.safeParse(raw);
-    if (!parsed.success) {
-      const map: Record<string, string> = {};
-      for (const issue of parsed.error.issues) {
-        map[issue.path.join(".")] = issue.message;
-      }
-      setErrors(map);
-      return;
-    }
-    setStatus("sending");
-    // Persist locally as a fallback and simulate submission.
-    // Wiring to Cloud + Resend is planned as follow-up.
-    try {
-      const key = "3m:contact-log";
-      const prev = JSON.parse(localStorage.getItem(key) || "[]");
-      prev.push({ ...parsed.data, at: new Date().toISOString() });
-      localStorage.setItem(key, JSON.stringify(prev));
-      await new Promise((r) => setTimeout(r, 800));
-      setStatus("sent");
-      (e.target as HTMLFormElement).reset();
-    } catch {
-      setStatus("error");
-    }
-  }
-
-  const inputCls =
-    "w-full bg-transparent border-b border-navy/20 py-3 text-navy placeholder:text-navy/30 focus:outline-none focus:border-gold transition-colors";
+  const people = TEAM.filter((p) => p.email || p.phone);
 
   return (
-    <section className="pt-24 pb-32 px-6">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-16">
+    <section className="px-6 pb-32 pt-24">
+      <div className="mx-auto max-w-5xl">
+        <div className="mx-auto mb-16 max-w-xl text-center">
           <p className="section-label mb-6">{t("contact.eyebrow")}</p>
-          <h1 className="font-script text-5xl md:text-6xl text-navy mb-6">
-            {t("contact.title")}
-          </h1>
-          <p className="text-navy/70 max-w-xl mx-auto leading-relaxed">{t("contact.intro")}</p>
+          <h1 className="mb-6 font-script text-5xl text-navy md:text-6xl">{t("contact.title")}</h1>
+          <p className="leading-relaxed text-navy/70">{t("contact.intro")}</p>
         </div>
 
-        {status === "sent" ? (
-          <div className="text-center py-16 border border-gold/40 rounded-md bg-soft-white/50">
-            <p className="font-display text-3xl italic text-navy mb-4">{t("contact.success")}</p>
-            <button
-              type="button"
-              onClick={() => setStatus("idle")}
-              className="mt-4 text-[11px] uppercase tracking-[0.3em] text-gold-ink hover:text-navy transition-colors"
-            >
-              ← Write another
-            </button>
-          </div>
-        ) : (
-          <form onSubmit={onSubmit} noValidate className="space-y-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <label className="eyebrow block mb-3" htmlFor="name">
-                  {t("contact.name")}
-                </label>
-                <input id="name" name="name" required className={inputCls} maxLength={100} />
-                {errors.name && (
-                  <p className="mt-2 text-xs text-destructive">{errors.name}</p>
-                )}
-              </div>
-              <div>
-                <label className="eyebrow block mb-3" htmlFor="email">
-                  {t("contact.email")}
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  className={inputCls}
-                  maxLength={255}
-                />
-                {errors.email && (
-                  <p className="mt-2 text-xs text-destructive">{errors.email}</p>
-                )}
-              </div>
-            </div>
-
-            <div>
-              <label className="eyebrow block mb-3" htmlFor="category">
-                {t("contact.category")}
-              </label>
-              <select
-                id="category"
-                name="category"
-                defaultValue="info"
-                className={inputCls + " appearance-none cursor-pointer"}
+        <div className="ornate ornate-stars mx-auto max-w-2xl px-4 py-12 text-center sm:px-10 md:px-16">
+          <p className="font-signature star-prefix mb-5 text-[17px] font-medium text-gold-ink">
+            {t("contact.general")}
+          </p>
+          <ContactLine
+            href={`mailto:${GENERAL_CONTACT.email}`}
+            icon={<Mail {...ICON} />}
+            className="text-[17px] sm:text-[24px] md:text-[30px]"
+          >
+            {GENERAL_CONTACT.email}
+          </ContactLine>
+          {GENERAL_CONTACT.phone && (
+            <div className="mt-5">
+              <ContactLine
+                href={telHref(GENERAL_CONTACT.phone)}
+                icon={<Phone {...ICON} />}
+                className="text-[20px] md:text-[24px]"
               >
-                <option value="info">{t("contact.category.info")}</option>
-                <option value="distribution">{t("contact.category.distribution")}</option>
-                <option value="press">{t("contact.category.press")}</option>
-                <option value="hospitality">{t("contact.category.hospitality")}</option>
-              </select>
+                {GENERAL_CONTACT.phone}
+              </ContactLine>
             </div>
+          )}
+        </div>
 
-            <div>
-              <label className="eyebrow block mb-3" htmlFor="subject">
-                {t("contact.subject")}
-              </label>
-              <input id="subject" name="subject" required className={inputCls} maxLength={150} />
-              {errors.subject && (
-                <p className="mt-2 text-xs text-destructive">{errors.subject}</p>
-              )}
+        {people.length > 0 && (
+          <>
+            <p className="font-signature star-prefix mb-10 mt-20 text-center text-[17px] font-medium text-gold-ink">
+              {t("contact.direct")}
+            </p>
+            <div className="mx-auto flex max-w-3xl flex-col gap-6">
+              {people.map((p) => (
+                <PersonCard key={p.name} person={p} />
+              ))}
             </div>
-
-            <div>
-              <label className="eyebrow block mb-3" htmlFor="message">
-                {t("contact.message")}
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows={6}
-                className={inputCls + " resize-none"}
-                maxLength={2000}
-              />
-              {errors.message && (
-                <p className="mt-2 text-xs text-destructive">{errors.message}</p>
-              )}
-            </div>
-
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-6">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-navy/40">
-                Hecho en México, Imported to Puglia
-              </p>
-              <button
-                type="submit"
-                disabled={status === "sending"}
-                className="group ornate ornate-sm ornate-solid ornate-interactive font-signature font-medium inline-flex items-center gap-4 px-8 py-4 text-crema text-[17px] hover:text-navy disabled:opacity-60"
-              >
-                {status === "sending" ? t("contact.sending") : t("contact.submit")}
-                <span className="transition-transform group-hover:translate-x-1">→</span>
-              </button>
-            </div>
-
-            {status === "error" && (
-              <p className="text-center text-destructive text-sm">{t("contact.error")}</p>
-            )}
-          </form>
+          </>
         )}
       </div>
     </section>
